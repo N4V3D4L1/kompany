@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>KÖMPANIE — Precision in Motion</title>
+  <meta name="description" content="Precision-engineered architectural hardware systems for contemporary spaces." />
+
+  <!-- ─── Google Fonts ───────────────────────────────────────────
+       Bebas Neue  → industrial display headline
+       DM Serif Display → editorial italic contrast
+       DM Mono     → precision / data-label mono
+       Barlow      → refined body copy
+  ──────────────────────────────────────────────────────────────── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400&family=Barlow:wght@200;300;400&display=swap" rel="stylesheet" />
+
+  <!-- ─── CDN: Three.js ────────────────────────────────────────── -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- ─── CDN: GSAP core + plugins ───────────────────────────── -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+
+  <!-- ─── CDN: Lenis smooth scroll ────────────────────────────── -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════
+       THREE.JS BACKGROUND CANVAS — subtle 3D depth layer
+  ══════════════════════════════════════════════════ -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- ══════════════════════════════════════════════════
+       CUSTOM CURSOR
+  ══════════════════════════════════════════════════ -->
+  <div id="cursor">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════
+       LOADING SCREEN — white minimal
+  ══════════════════════════════════════════════════ -->
+  <div id="loader">
+    <div class="loader-brand">KÖMPANIE</div>
+    <div class="loader-bar-wrap">
+      <div class="loader-bar" id="loader-bar"></div>
+    </div>
+    <div class="loader-label" id="loader-label">0%</div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════
+       NAVIGATION
+  ══════════════════════════════════════════════════ -->
+  <nav id="nav">
+    <div class="nav-logo">KÖMPANIE</div>
+    <ul class="nav-links">
+      <li><a href="#products">Products</a></li>
+      <li><a href="#engineering">Engineering</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <span class="nav-tag">DE / EN</span>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════════════
+       SECTION 01 — HERO
+  ══════════════════════════════════════════════════ -->
+  <section id="hero">
+
+    <!-- Floating CSS precision geometry shapes -->
+    <div class="hero-shapes">
+      <div class="hshape hshape--ring-lg"   data-parallax="0.15"></div>
+      <div class="hshape hshape--bar-h"     data-parallax="0.30"></div>
+      <div class="hshape hshape--bar-v"     data-parallax="0.20"></div>
+      <div class="hshape hshape--ring-sm"   data-parallax="0.10"></div>
+      <div class="hshape hshape--grid"      data-parallax="0.25"></div>
+      <div class="hshape hshape--cross"     data-parallax="0.35"></div>
+    </div>
+
+    <!-- Noise grain overlay -->
+    <div class="hero-grain"></div>
+
+    <!-- Hero content — centered -->
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="hero-eyebrow-line"></span>
+        <span class="hero-eyebrow-text">Architectural Hardware Design</span>
+        <span class="hero-eyebrow-line"></span>
+      </div>
+
+      <!-- Main headline — pre-split by JS before loader exits -->
+      <h1 class="hero-title" id="hero-title">KÖMPANIE</h1>
+
+      <p class="hero-tagline" id="hero-tagline">Precision in Motion</p>
+
+      <p class="hero-body" id="hero-body">
+        Precision-engineered hardware systems<br class="br-d" />
+        for contemporary spaces.
+      </p>
+
+      <div class="hero-ctas" id="hero-ctas">
+        <a class="btn btn--primary" href="#products">Explore Products</a>
+        <a class="btn btn--ghost" href="#projects">View Projects</a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-cue" id="scroll-cue">
+      <div class="scroll-cue-line"></div>
+      <span class="scroll-cue-text">SCROLL</span>
+    </div>
+
+    <!-- Ambient glows (very subtle on white) -->
+    <div class="hero-glow hero-glow--1"></div>
+    <div class="hero-glow hero-glow--2"></div>
+
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       SECTION 02 — BRAND PHILOSOPHY
+  ══════════════════════════════════════════════════ -->
+  <section id="philosophy">
+    <div class="philosophy-inner">
+
+      <div class="section-label">
+        <span class="sl-num">002</span>
+        <span class="sl-dash"></span>
+        <span class="sl-text">Brand Philosophy</span>
+      </div>
+
+      <div class="phil-statement" id="phil-statement">
+        <div class="phil-line">Engineering is not</div>
+        <div class="phil-line phil-line--italic">decoration.</div>
+        <div class="phil-line">It is movement, tolerance,</div>
+        <div class="phil-line">balance, and permanence.</div>
+      </div>
+
+      <div class="phil-cols">
+        <div class="phil-col" data-stagger="0">
+          <h4>Tolerance</h4>
+          <p>Every component manufactured within micron-level tolerances. Precision is not a feature — it is the foundation.</p>
+        </div>
+        <div class="phil-col" data-stagger="1">
+          <h4>Movement</h4>
+          <p>Doors pivot. Drawers glide. Profiles interlock. Motion is the primary language of architecture, and hardware is its grammar.</p>
+        </div>
+        <div class="phil-col" data-stagger="2">
+          <h4>Permanence</h4>
+          <p>Designed for decades of use. Finished in materials that age beautifully. Built to outlast the building itself.</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="phil-depth-ring" id="phil-ring"></div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       SECTION 03 — PRODUCT DOMAINS
+  ══════════════════════════════════════════════════ -->
+  <section id="products">
+    <div class="products-header">
+      <div class="section-label">
+        <span class="sl-num">003</span>
+        <span class="sl-dash"></span>
+        <span class="sl-text">Product Domains</span>
+      </div>
+      <h2 class="products-title">Four systems.<br /><em>One language.</em></h2>
+    </div>
+
+    <div class="products-grid">
+
+      <!-- Card 1: Door Hardware — white bg SVG -->
+      <article class="pcard" data-card="door">
+        <div class="pcard-media">
+          <svg class="pcard-svg" viewBox="0 0 500 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <radialGradient id="dh-g" cx="40%" cy="55%" r="60%">
+                <stop offset="0%" stop-color="#b89b72" stop-opacity="0.18"/>
+                <stop offset="100%" stop-color="#f2f0ec" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <rect width="500" height="600" fill="#f2f0ec"/>
+            <rect width="500" height="600" fill="url(#dh-g)"/>
+            <!-- Door handle silhouette — dark on light -->
+            <rect x="240" y="180" width="20" height="240" rx="10" fill="none" stroke="#1a1a1a" stroke-width="1" opacity="0.4"/>
+            <rect x="210" y="280" width="80" height="8" rx="4" fill="#1a1a1a" opacity="0.25"/>
+            <circle cx="250" cy="300" r="4" fill="#1a1a1a" opacity="0.5"/>
+            <rect x="230" y="150" width="40" height="4" rx="2" fill="#1a1a1a" opacity="0.15"/>
+            <rect x="230" y="446" width="40" height="4" rx="2" fill="#1a1a1a" opacity="0.15"/>
+            <line x1="0" y1="300" x2="500" y2="300" stroke="#1a1a1a" stroke-width="0.3" opacity="0.06"/>
+            <!-- Precision tick marks -->
+            <line x1="230" y1="175" x2="270" y2="175" stroke="#b89b72" stroke-width="0.8" opacity="0.5"/>
+            <line x1="230" y1="420" x2="270" y2="420" stroke="#b89b72" stroke-width="0.8" opacity="0.5"/>
+          </svg>
+          <div class="pcard-shine"></div>
+        </div>
+        <div class="pcard-info">
+          <span class="pcard-num">01</span>
+          <div class="pcard-text">
+            <h3>Door Hardware</h3>
+            <p>Lever handles, pull bars, hinges, and pivot systems engineered for silent, durable operation.</p>
+          </div>
+          <div class="pcard-cta">
+            <span>Explore</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2: Furniture Fittings -->
+      <article class="pcard" data-card="furniture">
+        <div class="pcard-media">
+          <svg class="pcard-svg" viewBox="0 0 500 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <linearGradient id="ff-g" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#4a5a6a" stop-opacity="0.1"/>
+                <stop offset="100%" stop-color="#f2f0ec" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <rect width="500" height="600" fill="#f0f2f4"/>
+            <rect width="500" height="600" fill="url(#ff-g)"/>
+            <!-- Drawer slide silhouette — dark strokes -->
+            <rect x="80" y="240" width="340" height="12" rx="6" fill="none" stroke="#2a3540" stroke-width="0.8" opacity="0.35"/>
+            <rect x="80" y="270" width="340" height="12" rx="6" fill="none" stroke="#2a3540" stroke-width="0.8" opacity="0.25"/>
+            <rect x="80" y="300" width="340" height="12" rx="6" fill="none" stroke="#2a3540" stroke-width="0.8" opacity="0.18"/>
+            <!-- Hinge detail -->
+            <circle cx="140" cy="246" r="5" fill="none" stroke="#2a3540" stroke-width="0.8" opacity="0.5"/>
+            <circle cx="360" cy="246" r="5" fill="none" stroke="#2a3540" stroke-width="0.8" opacity="0.5"/>
+            <rect x="200" y="200" width="100" height="8" rx="4" fill="#2a3540" opacity="0.12"/>
+            <!-- Accent pull detail -->
+            <rect x="190" y="242" width="120" height="4" rx="2" fill="#b89b72" opacity="0.4"/>
+          </svg>
+          <div class="pcard-shine"></div>
+        </div>
+        <div class="pcard-info">
+          <span class="pcard-num">02</span>
+          <div class="pcard-text">
+            <h3>Furniture Fittings</h3>
+            <p>Soft-close drawer systems, concealed hinges, and sliding mechanisms for bespoke joinery.</p>
+          </div>
+          <div class="pcard-cta">
+            <span>Explore</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3: Aluminium Profiles -->
+      <article class="pcard" data-card="profiles">
+        <div class="pcard-media">
+          <svg class="pcard-svg" viewBox="0 0 500 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <linearGradient id="ap-g" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#2a3038" stop-opacity="0.1"/>
+                <stop offset="100%" stop-color="#f0f0f2" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <rect width="500" height="600" fill="#f0f0f2"/>
+            <rect width="500" height="600" fill="url(#ap-g)"/>
+            <!-- Profile cross-sections — dark on light -->
+            <rect x="140" y="160" width="220" height="28" fill="none" stroke="#2a3038" stroke-width="0.8" opacity="0.4"/>
+            <rect x="160" y="188" width="180" height="8"  fill="none" stroke="#2a3038" stroke-width="0.5" opacity="0.2"/>
+            <rect x="140" y="220" width="220" height="28" fill="none" stroke="#2a3038" stroke-width="0.8" opacity="0.35"/>
+            <rect x="160" y="248" width="180" height="8"  fill="none" stroke="#2a3038" stroke-width="0.5" opacity="0.2"/>
+            <rect x="140" y="280" width="220" height="28" fill="none" stroke="#2a3038" stroke-width="0.8" opacity="0.3"/>
+            <rect x="160" y="308" width="180" height="8"  fill="none" stroke="#2a3038" stroke-width="0.5" opacity="0.18"/>
+            <rect x="140" y="340" width="220" height="28" fill="none" stroke="#2a3038" stroke-width="0.8" opacity="0.22"/>
+            <!-- End-cap accent -->
+            <circle cx="140" cy="174" r="4" fill="#b89b72" opacity="0.45"/>
+            <circle cx="360" cy="174" r="4" fill="#b89b72" opacity="0.45"/>
+            <!-- Dimension line -->
+            <line x1="100" y1="160" x2="100" y2="368" stroke="#b89b72" stroke-width="0.6" opacity="0.4"/>
+            <line x1="96"  y1="160" x2="104" y2="160" stroke="#b89b72" stroke-width="0.6" opacity="0.4"/>
+            <line x1="96"  y1="368" x2="104" y2="368" stroke="#b89b72" stroke-width="0.6" opacity="0.4"/>
+          </svg>
+          <div class="pcard-shine"></div>
+        </div>
+        <div class="pcard-info">
+          <span class="pcard-num">03</span>
+          <div class="pcard-text">
+            <h3>Aluminium Profiles</h3>
+            <p>Extruded and anodised aluminium frame systems for partitions, facades, and modular furniture.</p>
+          </div>
+          <div class="pcard-cta">
+            <span>Explore</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 4: Lighting Systems -->
+      <article class="pcard" data-card="lighting">
+        <div class="pcard-media">
+          <svg class="pcard-svg" viewBox="0 0 500 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <radialGradient id="ls-g" cx="50%" cy="40%" r="50%">
+                <stop offset="0%" stop-color="#b89b72" stop-opacity="0.2"/>
+                <stop offset="100%" stop-color="#f2f0eb" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <rect width="500" height="600" fill="#f2f0eb"/>
+            <rect width="500" height="600" fill="url(#ls-g)"/>
+            <!-- Track lighting — dark strokes, gold accents -->
+            <rect x="100" y="220" width="300" height="5" rx="2.5" fill="#1a1a1a" opacity="0.2"/>
+            <!-- Spot fixtures -->
+            <circle cx="180" cy="222" r="9" fill="none" stroke="#1a1a1a" stroke-width="0.8" opacity="0.35"/>
+            <circle cx="250" cy="222" r="9" fill="none" stroke="#1a1a1a" stroke-width="0.8" opacity="0.35"/>
+            <circle cx="320" cy="222" r="9" fill="none" stroke="#1a1a1a" stroke-width="0.8" opacity="0.35"/>
+            <!-- Light cones — warm gold -->
+            <polygon points="171,231 189,231 210,340 150,340" fill="#b89b72" opacity="0.06"/>
+            <polygon points="241,231 259,231 280,340 220,340" fill="#b89b72" opacity="0.06"/>
+            <polygon points="311,231 329,231 350,340 290,340" fill="#b89b72" opacity="0.06"/>
+            <!-- Cone outlines -->
+            <line x1="180" y1="231" x2="155" y2="330" stroke="#b89b72" stroke-width="0.5" opacity="0.25"/>
+            <line x1="180" y1="231" x2="205" y2="330" stroke="#b89b72" stroke-width="0.5" opacity="0.25"/>
+            <line x1="250" y1="231" x2="225" y2="330" stroke="#b89b72" stroke-width="0.5" opacity="0.25"/>
+            <line x1="250" y1="231" x2="275" y2="330" stroke="#b89b72" stroke-width="0.5" opacity="0.25"/>
+          </svg>
+          <div class="pcard-shine"></div>
+        </div>
+        <div class="pcard-info">
+          <span class="pcard-num">04</span>
+          <div class="pcard-text">
+            <h3>Lighting Systems</h3>
+            <p>Integrated LED profiles and architectural track systems designed to disappear into the space.</p>
+          </div>
+          <div class="pcard-cta">
+            <span>Explore</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+      </article>
+
+    </div><!-- /products-grid -->
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       DOOR HANDLES — CINEMATIC SCROLL STORY
+       4 Scenes: Floating → Exploded Anatomy → Reassembly → Collection
+       Pinned section, Three.js handle, mouse-driven light
+  ══════════════════════════════════════════════════ -->
+  <section id="door-handles">
+    <div class="dh-sticky" id="dh-sticky">
+
+      <!-- Dedicated Three.js canvas — separate from bg-canvas -->
+      <canvas id="dh-canvas"></canvas>
+
+      <!-- ─── Scene 1: Floating Handle ──────────────────────────── -->
+      <div class="dh-overlay" id="dh-overlay-1">
+        <div class="dh-corner-label">
+          <span class="sl-num">S·01</span>
+          <span class="sl-dash"></span>
+          <span class="sl-text">Door Hardware</span>
+        </div>
+        <div class="dh-text-block dh-text-block--left">
+          <h2 class="dh-headline">One object.<br><em>Infinite precision.</em></h2>
+          <p class="dh-body">The lever handle — architectural hardware at its purest. Every curve intentional. Every millimetre earns its place.</p>
+        </div>
+        <div class="dh-scroll-hint">
+          <div class="dh-scroll-line"></div>
+          <span class="dh-scroll-text">Scroll to explore</span>
+        </div>
+      </div>
+
+      <!-- ─── Scene 2: Exploded Anatomy ─────────────────────────── -->
+      <div class="dh-overlay" id="dh-overlay-2">
+        <div class="dh-corner-label">
+          <span class="sl-num">S·02</span>
+          <span class="sl-dash"></span>
+          <span class="sl-text">Anatomy</span>
+        </div>
+        <!-- Labels positioned to match exploded Three.js component locations -->
+        <div class="dh-label dh-label--lever">
+          <span class="dh-label-pip"></span>
+          <div class="dh-label-body">
+            <span class="dh-label-name">Lever Arm</span>
+            <span class="dh-label-spec">CrNiMo 17-12-2 Steel</span>
+          </div>
+        </div>
+        <div class="dh-label dh-label--rose">
+          <span class="dh-label-pip"></span>
+          <div class="dh-label-body">
+            <span class="dh-label-name">Rose</span>
+            <span class="dh-label-spec">ø52mm · Solid Brass</span>
+          </div>
+        </div>
+        <div class="dh-label dh-label--spindle">
+          <span class="dh-label-pip"></span>
+          <div class="dh-label-body">
+            <span class="dh-label-name">Spindle</span>
+            <span class="dh-label-spec">8×8mm · 65mm PZ</span>
+          </div>
+        </div>
+        <div class="dh-label dh-label--mechanism">
+          <span class="dh-label-pip"></span>
+          <div class="dh-label-body">
+            <span class="dh-label-name">Return Spring</span>
+            <span class="dh-label-spec">100,000 cycle rated</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─── Scene 3: Reassembly ────────────────────────────────── -->
+      <div class="dh-overlay" id="dh-overlay-3">
+        <div class="dh-corner-label">
+          <span class="sl-num">S·03</span>
+          <span class="sl-dash"></span>
+          <span class="sl-text">Assembly</span>
+        </div>
+        <div class="dh-text-block dh-text-block--right">
+          <h2 class="dh-headline">Assembled.<br><em>Exact.</em></h2>
+          <p class="dh-body">Each component torqued to specification. Finished to Ra&nbsp;0.4μm. Assembled once. Reliable for decades.</p>
+        </div>
+      </div>
+
+      <!-- ─── Scene 4: Product Lineup Gallery ───────────────────── -->
+      <div class="dh-overlay dh-overlay--gallery" id="dh-overlay-4">
+
+        <div class="dh-gallery-header">
+          <div class="dh-corner-label">
+            <span class="sl-num">S·04</span>
+            <span class="sl-dash"></span>
+            <span class="sl-text">The Collection</span>
+          </div>
+          <h2 class="dh-gallery-title">Five handles.<br><em>One philosophy.</em></h2>
+        </div>
+
+        <!-- Draggable horizontal gallery -->
+        <div class="dh-gallery-viewport">
+          <div class="dh-gallery-track" id="dh-gallery-track">
+
+            <!-- ── Handle 01: Linear Pull Bar ── -->
+            <article class="dh-hcard">
+              <div class="dh-hcard-visual">
+                <svg viewBox="0 0 240 400" xmlns="http://www.w3.org/2000/svg" class="dh-hcard-svg">
+                  <defs>
+                    <linearGradient id="h01-bar" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%"   stop-color="#2a2520"/>
+                      <stop offset="28%"  stop-color="#5a5248"/>
+                      <stop offset="55%"  stop-color="#8a8278" stop-opacity="0.9"/>
+                      <stop offset="80%"  stop-color="#4a4440"/>
+                      <stop offset="100%" stop-color="#2a2520"/>
+                    </linearGradient>
+                    <radialGradient id="h01-cap" cx="35%" cy="35%" r="65%">
+                      <stop offset="0%"   stop-color="#6a6260"/>
+                      <stop offset="100%" stop-color="#2a2520"/>
+                    </radialGradient>
+                    <linearGradient id="h01-pl" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%"   stop-color="#e8e4de"/>
+                      <stop offset="50%"  stop-color="#f5f3f0"/>
+                      <stop offset="100%" stop-color="#e0dcd6"/>
+                    </linearGradient>
+                  </defs>
+                  <rect x="103" y="55"  width="34" height="290" rx="5" fill="url(#h01-pl)" stroke="#d0ccc6" stroke-width="0.6"/>
+                  <rect x="108" y="68"  width="24" height="264" rx="12" fill="url(#h01-bar)"/>
+                  <rect x="116" y="72"  width="5"  height="256" rx="2.5" fill="white" opacity="0.12"/>
+                  <circle cx="120" cy="68"  r="12" fill="url(#h01-cap)"/>
+                  <circle cx="117" cy="65"  r="3.5" fill="white" opacity="0.22"/>
+                  <circle cx="120" cy="332" r="12" fill="url(#h01-cap)"/>
+                  <circle cx="117" cy="329" r="3.5" fill="white" opacity="0.22"/>
+                  <circle cx="120" cy="108" r="2.5" fill="#1a1510"/>
+                  <line   x1="117.5" y1="108" x2="122.5" y2="108" stroke="#3a3530" stroke-width="0.9"/>
+                  <circle cx="120" cy="292" r="2.5" fill="#1a1510"/>
+                  <line   x1="117.5" y1="292" x2="122.5" y2="292" stroke="#3a3530" stroke-width="0.9"/>
+                </svg>
+              </div>
+              <div class="dh-hcard-info">
+                <span class="dh-hcard-num">01</span>
+                <h3 class="dh-hcard-name">Linear Pull</h3>
+                <p class="dh-hcard-spec">L-300 · ø24mm</p>
+                <p class="dh-hcard-mat">Blackened steel</p>
+              </div>
+            </article>
+
+            <!-- ── Handle 02: L-Lever on Brass Rose ── -->
+            <article class="dh-hcard">
+              <div class="dh-hcard-visual">
+                <svg viewBox="0 0 240 400" xmlns="http://www.w3.org/2000/svg" class="dh-hcard-svg">
+                  <defs>
+                    <linearGradient id="h02-bar" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%"   stop-color="#d4c8b0"/>
+                      <stop offset="40%"  stop-color="#f0e4cc"/>
+                      <stop offset="60%"  stop-color="#ffffff" stop-opacity="0.85"/>
+                      <stop offset="100%" stop-color="#c0b490"/>
+                    </linearGradient>
+                    <linearGradient id="h02-nk" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%"   stop-color="#b89b72"/>
+                      <stop offset="50%"  stop-color="#d4bc90"/>
+                      <stop offset="100%" stop-color="#b89b72"/>
+                    </linearGradient>
+                    <radialGradient id="h02-rose" cx="38%" cy="38%" r="62%">
+                      <stop offset="0%"   stop-color="#f0e4cc"/>
+                      <stop offset="60%"  stop-color="#c8b080"/>
+                      <stop offset="100%" stop-color="#9a7850"/>
+                    </radialGradient>
+                  </defs>
+                  <circle cx="120" cy="305" r="40" fill="url(#h02-rose)"/>
+                  <circle cx="120" cy="305" r="30" fill="none" stroke="#d4bc90" stroke-width="0.5" opacity="0.5"/>
+                  <circle cx="120" cy="305" r="7"  fill="#8a6840"/>
+                  <ellipse cx="120" cy="318" rx="5" ry="8" fill="#2a1808" opacity="0.22"/>
+                  <rect x="112" y="192" width="16" height="113" rx="8" fill="url(#h02-nk)"/>
+                  <rect x="116" y="195" width="5"  height="107" rx="2.5" fill="white" opacity="0.25"/>
+                  <rect x="56"  y="148" width="152" height="16"  rx="8" fill="url(#h02-bar)"/>
+                  <rect x="60"  y="151" width="144" height="6"   rx="3" fill="white" opacity="0.25"/>
+                  <circle cx="56"  cy="156" r="8" fill="#c8b080"/>
+                  <circle cx="56"  cy="156" r="3" fill="white" opacity="0.22"/>
+                  <circle cx="208" cy="156" r="8" fill="#c8b080"/>
+                  <circle cx="208" cy="156" r="3" fill="white" opacity="0.22"/>
+                  <circle cx="120" cy="164" r="9" fill="#d4bc90"/>
+                </svg>
+              </div>
+              <div class="dh-hcard-info">
+                <span class="dh-hcard-num">02</span>
+                <h3 class="dh-hcard-name">Lever KM-22</h3>
+                <p class="dh-hcard-spec">L-138mm · PZ 65</p>
+                <p class="dh-hcard-mat">Polished brass</p>
+              </div>
+            </article>
+
+            <!-- ── Handle 03: D-Pull Arc ── -->
+            <article class="dh-hcard">
+              <div class="dh-hcard-visual">
+                <svg viewBox="0 0 240 400" xmlns="http://www.w3.org/2000/svg" class="dh-hcard-svg">
+                  <defs>
+                    <linearGradient id="h03-arc" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%"   stop-color="#484038"/>
+                      <stop offset="25%"  stop-color="#8a8078"/>
+                      <stop offset="52%"  stop-color="#c8c0b8"/>
+                      <stop offset="75%"  stop-color="#8a8078"/>
+                      <stop offset="100%" stop-color="#484038"/>
+                    </linearGradient>
+                    <linearGradient id="h03-pl" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%"   stop-color="#f0eee8"/>
+                      <stop offset="100%" stop-color="#e4e0da"/>
+                    </linearGradient>
+                  </defs>
+                  <rect x="88" y="88" width="48" height="224" rx="8" fill="url(#h03-pl)" stroke="#d8d4ce" stroke-width="0.6"/>
+                  <path d="M112 120 Q205 210 112 300" fill="none" stroke="url(#h03-arc)" stroke-width="20" stroke-linecap="round"/>
+                  <path d="M112 128 Q196 210 112 292" fill="none" stroke="white" stroke-width="5" opacity="0.2" stroke-linecap="round"/>
+                  <rect x="92" y="116" width="24" height="22" rx="5" fill="#6a6460"/>
+                  <rect x="95" y="119" width="7"  height="16" rx="2" fill="#9a9490" opacity="0.38"/>
+                  <rect x="92" y="262" width="24" height="22" rx="5" fill="#6a6460"/>
+                  <rect x="95" y="265" width="7"  height="16" rx="2" fill="#9a9490" opacity="0.38"/>
+                  <circle cx="112" cy="162" r="3" fill="#2a2520" opacity="0.35"/>
+                  <circle cx="112" cy="258" r="3" fill="#2a2520" opacity="0.35"/>
+                </svg>
+              </div>
+              <div class="dh-hcard-info">
+                <span class="dh-hcard-num">03</span>
+                <h3 class="dh-hcard-name">D-Pull Arc</h3>
+                <p class="dh-hcard-spec">H-220mm · ø20mm</p>
+                <p class="dh-hcard-mat">Satin graphite</p>
+              </div>
+            </article>
+
+            <!-- ── Handle 04: Bauhaus BH-1 ── -->
+            <article class="dh-hcard">
+              <div class="dh-hcard-visual">
+                <svg viewBox="0 0 240 400" xmlns="http://www.w3.org/2000/svg" class="dh-hcard-svg">
+                  <defs>
+                    <linearGradient id="h04-h" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%"   stop-color="#e0dcd6"/>
+                      <stop offset="30%"  stop-color="#f5f3ef"/>
+                      <stop offset="60%"  stop-color="#ffffff"/>
+                      <stop offset="100%" stop-color="#d8d4ce"/>
+                    </linearGradient>
+                    <linearGradient id="h04-v" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%"   stop-color="#c8c4be"/>
+                      <stop offset="50%"  stop-color="#e8e4de"/>
+                      <stop offset="100%" stop-color="#c8c4be"/>
+                    </linearGradient>
+                  </defs>
+                  <rect x="96" y="268" width="48" height="48" rx="2" fill="#dcd8d2" stroke="#c0bcb6" stroke-width="0.7"/>
+                  <rect x="102" y="274" width="36" height="36" rx="1" fill="none" stroke="#c0bcb6" stroke-width="0.4" opacity="0.5"/>
+                  <rect x="111" y="283" width="18" height="18" rx="1" fill="#a8a4a0"/>
+                  <rect x="108" y="168" width="24" height="102" fill="url(#h04-v)"/>
+                  <rect x="112" y="171" width="7"  height="96"  fill="white" opacity="0.22"/>
+                  <rect x="48"  y="150" width="192" height="14" fill="url(#h04-h)"/>
+                  <rect x="52"  y="153" width="184" height="5"  fill="white" opacity="0.22"/>
+                  <rect x="48"  y="150" width="14" height="14"  fill="#b8b4ae"/>
+                  <rect x="226" y="150" width="14" height="14"  fill="#b8b4ae"/>
+                  <line x1="50" y1="157" x2="238" y2="157" stroke="white" stroke-width="0.5" opacity="0.22"/>
+                </svg>
+              </div>
+              <div class="dh-hcard-info">
+                <span class="dh-hcard-num">04</span>
+                <h3 class="dh-hcard-name">Bauhaus BH-1</h3>
+                <p class="dh-hcard-spec">L-160mm · 14×14</p>
+                <p class="dh-hcard-mat">Brushed aluminium</p>
+              </div>
+            </article>
+
+            <!-- ── Handle 05: T-Grip Architectural ── -->
+            <article class="dh-hcard">
+              <div class="dh-hcard-visual">
+                <svg viewBox="0 0 240 400" xmlns="http://www.w3.org/2000/svg" class="dh-hcard-svg">
+                  <defs>
+                    <linearGradient id="h05-h" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%"   stop-color="#b89b72"/>
+                      <stop offset="25%"  stop-color="#d4bc8e"/>
+                      <stop offset="50%"  stop-color="#f0ddb0"/>
+                      <stop offset="75%"  stop-color="#d4bc8e"/>
+                      <stop offset="100%" stop-color="#b89b72"/>
+                    </linearGradient>
+                    <linearGradient id="h05-v" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%"   stop-color="#9a8458"/>
+                      <stop offset="50%"  stop-color="#c4a870"/>
+                      <stop offset="100%" stop-color="#9a8458"/>
+                    </linearGradient>
+                    <radialGradient id="h05-rose" cx="40%" cy="40%" r="60%">
+                      <stop offset="0%"   stop-color="#e0cc98"/>
+                      <stop offset="100%" stop-color="#9a7840"/>
+                    </radialGradient>
+                  </defs>
+                  <circle cx="120" cy="320" r="34" fill="url(#h05-rose)"/>
+                  <circle cx="120" cy="320" r="25" fill="none" stroke="#d4bc8e" stroke-width="0.5" opacity="0.5"/>
+                  <circle cx="120" cy="320" r="6"  fill="#7a5828"/>
+                  <rect x="110" y="118" width="20" height="202" rx="2" fill="url(#h05-v)"/>
+                  <rect x="114" y="121" width="6"  height="196" rx="2" fill="white" opacity="0.2"/>
+                  <rect x="64"  y="106" width="136" height="14" rx="2" fill="url(#h05-h)"/>
+                  <rect x="68"  y="109" width="128" height="5"  rx="2" fill="white" opacity="0.25"/>
+                  <rect x="106" y="102" width="28" height="22"  rx="3" fill="#c0a060"/>
+                  <rect x="110" y="105" width="8"  height="16"  rx="2" fill="#e4c888" opacity="0.38"/>
+                  <rect x="64"  y="106" width="8" height="14"   rx="2" fill="#9a7840"/>
+                  <rect x="192" y="106" width="8" height="14"   rx="2" fill="#9a7840"/>
+                  <circle cx="100" cy="310" r="2.5" fill="#5a3810" opacity="0.4"/>
+                  <circle cx="140" cy="310" r="2.5" fill="#5a3810" opacity="0.4"/>
+                </svg>
+              </div>
+              <div class="dh-hcard-info">
+                <span class="dh-hcard-num">05</span>
+                <h3 class="dh-hcard-name">T-Grip Arch</h3>
+                <p class="dh-hcard-spec">W-130mm · H-210</p>
+                <p class="dh-hcard-mat">Polished gold PVD</p>
+              </div>
+            </article>
+
+          </div><!-- /dh-gallery-track -->
+        </div><!-- /dh-gallery-viewport -->
+
+        <div class="dh-drag-hint" id="dh-drag-hint">
+          <div class="dh-drag-line"></div>
+          <span>drag to explore</span>
+          <div class="dh-drag-line"></div>
+        </div>
+
+      </div><!-- /dh-overlay-4 -->
+
+      <!-- Scene progress pips (right edge) -->
+      <div class="dh-scene-nav">
+        <div class="dh-nav-pip" data-scene="1"></div>
+        <div class="dh-nav-pip" data-scene="2"></div>
+        <div class="dh-nav-pip" data-scene="3"></div>
+        <div class="dh-nav-pip" data-scene="4"></div>
+      </div>
+
+    </div><!-- /dh-sticky -->
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       SECTION 04 — MOTION / ENGINEERING (HORIZONTAL PIN)
+  ══════════════════════════════════════════════════ -->
+  <section id="engineering">
+    <div class="eng-sticky" id="eng-sticky">
+      <div class="eng-track" id="eng-track">
+
+        <!-- Panel A -->
+        <div class="eng-panel">
+          <div class="eng-panel-num">01</div>
+          <h2 class="eng-statement">Built for<br />movement.</h2>
+          <p class="eng-body">Every mechanism tested to 100,000 cycles. Every surface finished to DIN tolerances. Movement that never wavers.</p>
+          <div class="eng-detail">
+            <!-- Precision radial engineering form — dark on light -->
+            <svg class="eng-form" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="150" cy="150" r="100" fill="none" stroke="#1a1a1a" stroke-width="0.5" opacity="0.2"/>
+              <circle cx="150" cy="150" r="70"  fill="none" stroke="#1a1a1a" stroke-width="0.5" opacity="0.15"/>
+              <circle cx="150" cy="150" r="40"  fill="none" stroke="#1a1a1a" stroke-width="0.5" opacity="0.25"/>
+              <line x1="50"  y1="150" x2="250" y2="150" stroke="#1a1a1a" stroke-width="0.4" opacity="0.1"/>
+              <line x1="150" y1="50"  x2="150" y2="250" stroke="#1a1a1a" stroke-width="0.4" opacity="0.1"/>
+              <circle cx="150" cy="50"  r="3.5" fill="#b89b72" opacity="0.6"/>
+              <circle cx="250" cy="150" r="3.5" fill="#b89b72" opacity="0.6"/>
+              <circle cx="150" cy="250" r="3.5" fill="#b89b72" opacity="0.6"/>
+              <circle cx="50"  cy="150" r="3.5" fill="#b89b72" opacity="0.6"/>
+              <circle cx="150" cy="150" r="5" fill="#b89b72" opacity="0.8"/>
+              <!-- Tick marks -->
+              <line x1="150" y1="47" x2="150" y2="55" stroke="#b89b72" stroke-width="1" opacity="0.5"/>
+              <line x1="247" y1="150" x2="253" y2="150" stroke="#b89b72" stroke-width="1" opacity="0.5"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Panel B -->
+        <div class="eng-panel">
+          <div class="eng-panel-num">02</div>
+          <h2 class="eng-statement">Designed for<br />architecture.</h2>
+          <p class="eng-body">Hardware that respects the architect's vision. Invisible when it should be. Present when it must be.</p>
+          <div class="eng-detail">
+            <svg class="eng-form" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="ef-g2" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#2a3540" stop-opacity="0.2"/>
+                  <stop offset="100%" stop-color="#2a3540" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <rect x="60"  y="60"  width="180" height="180" fill="none" stroke="#2a3540" stroke-width="0.5" opacity="0.2"/>
+              <rect x="90"  y="90"  width="120" height="120" fill="none" stroke="#2a3540" stroke-width="0.5" opacity="0.15"/>
+              <rect x="120" y="120" width="60"  height="60"  fill="url(#ef-g2)" opacity="0.5"/>
+              <rect x="120" y="120" width="60"  height="60"  fill="none" stroke="#b89b72" stroke-width="0.8" opacity="0.5"/>
+              <line x1="60" y1="60" x2="240" y2="240" stroke="#1a1a1a" stroke-width="0.3" opacity="0.08"/>
+              <line x1="240" y1="60" x2="60" y2="240" stroke="#1a1a1a" stroke-width="0.3" opacity="0.08"/>
+              <!-- Corner squares -->
+              <rect x="56" y="56" width="8" height="8" fill="#b89b72" opacity="0.3"/>
+              <rect x="236" y="56" width="8" height="8" fill="#b89b72" opacity="0.3"/>
+              <rect x="56" y="236" width="8" height="8" fill="#b89b72" opacity="0.3"/>
+              <rect x="236" y="236" width="8" height="8" fill="#b89b72" opacity="0.3"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Panel C -->
+        <div class="eng-panel">
+          <div class="eng-panel-num">03</div>
+          <h2 class="eng-statement">Defined by<br />precision.</h2>
+          <p class="eng-body">From concept to casting, every detail is interrogated. Precision is the only luxury that lasts.</p>
+          <div class="eng-detail">
+            <svg class="eng-form" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="150,50 260,220 40,220" fill="none" stroke="#1a1a1a" stroke-width="0.5" opacity="0.22"/>
+              <polygon points="150,80 235,210 65,210" fill="none" stroke="#1a1a1a" stroke-width="0.4" opacity="0.14"/>
+              <polygon points="150,110 210,200 90,200" fill="none" stroke="#1a1a1a" stroke-width="0.4" opacity="0.1"/>
+              <circle cx="150" cy="50"  r="4" fill="#b89b72" opacity="0.65"/>
+              <circle cx="260" cy="220" r="4" fill="#b89b72" opacity="0.65"/>
+              <circle cx="40"  cy="220" r="4" fill="#b89b72" opacity="0.65"/>
+              <line x1="150" y1="50" x2="150" y2="220" stroke="#b89b72" stroke-width="0.4" opacity="0.2"/>
+              <!-- Measurement marks -->
+              <line x1="146" y1="50"  x2="154" y2="50"  stroke="#b89b72" stroke-width="1" opacity="0.5"/>
+              <line x1="146" y1="220" x2="154" y2="220" stroke="#b89b72" stroke-width="1" opacity="0.5"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Panel D: Spec data -->
+        <div class="eng-panel eng-panel--data">
+          <div class="eng-panel-num">04</div>
+          <h2 class="eng-statement">Numbers<br />matter.</h2>
+          <div class="eng-stats">
+            <div class="eng-stat">
+              <span class="eng-stat-num" data-target="100000">0</span>
+              <span class="eng-stat-label">Cycles tested</span>
+            </div>
+            <div class="eng-stat">
+              <span class="eng-stat-num" data-target="0.01">0</span>
+              <span class="eng-stat-label">mm tolerance</span>
+            </div>
+            <div class="eng-stat">
+              <span class="eng-stat-num" data-target="40">0</span>
+              <span class="eng-stat-label">Year warranty</span>
+            </div>
+            <div class="eng-stat">
+              <span class="eng-stat-num" data-target="2000">0</span>
+              <span class="eng-stat-label">SKUs in range</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /eng-track -->
+
+      <!-- Progress bar -->
+      <div class="eng-progress">
+        <div class="eng-progress-fill" id="eng-progress-fill"></div>
+      </div>
+
+    </div><!-- /eng-sticky -->
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       SECTION 05 — SIGNATURE TYPOGRAPHY
+  ══════════════════════════════════════════════════ -->
+  <section id="signature">
+    <div class="sig-inner">
+
+      <div class="section-label">
+        <span class="sl-num">005</span>
+        <span class="sl-dash"></span>
+        <span class="sl-text">Identity</span>
+      </div>
+
+      <div class="sig-brand" id="sig-brand">KÖMPANIE</div>
+
+      <div class="sig-tagline-wrap">
+        <div class="sig-tagline" id="sig-tagline">Precision in Motion</div>
+      </div>
+
+      <div class="sig-sub" id="sig-sub">
+        Hardware that defines space.
+      </div>
+
+    </div>
+    <div class="sig-line-accent" id="sig-line"></div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       SECTION 06 — PROJECT / APPLICATION PANELS
+  ══════════════════════════════════════════════════ -->
+  <section id="projects">
+
+    <div class="projects-header">
+      <div class="section-label">
+        <span class="sl-num">006</span>
+        <span class="sl-dash"></span>
+        <span class="sl-text">Applications</span>
+      </div>
+      <h2 class="projects-title">Where hardware<br /><em>meets architecture.</em></h2>
+    </div>
+
+    <div class="proj-panels">
+
+      <!-- Panel 1: Villas -->
+      <div class="proj-panel" data-proj="villas">
+        <div class="proj-panel-media">
+          <div class="proj-panel-img" id="proj-img-1">
+            <svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+              <defs>
+                <linearGradient id="p1-sky" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%"   stop-color="#c8c0b4"/>
+                  <stop offset="55%"  stop-color="#e8e0d4"/>
+                  <stop offset="100%" stop-color="#f0ece6"/>
+                </linearGradient>
+                <linearGradient id="p1-wall" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%"   stop-color="#d4ccc0"/>
+                  <stop offset="100%" stop-color="#b8b0a4"/>
+                </linearGradient>
+                <linearGradient id="p1-door" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%"   stop-color="#2a2520"/>
+                  <stop offset="45%"  stop-color="#3a3530"/>
+                  <stop offset="100%" stop-color="#2a2520"/>
+                </linearGradient>
+                <linearGradient id="p1-light" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%"   stop-color="#f8f4ee" stop-opacity="0.9"/>
+                  <stop offset="100%" stop-color="#f8f4ee" stop-opacity="0"/>
+                </linearGradient>
+                <radialGradient id="p1-sun" cx="72%" cy="18%" r="35%">
+                  <stop offset="0%"   stop-color="#ffffff" stop-opacity="0.4"/>
+                  <stop offset="100%" stop-color="#c8c0b4" stop-opacity="0"/>
+                </radialGradient>
+              </defs>
+              <!-- Sky -->
+              <rect width="900" height="600" fill="url(#p1-sky)"/>
+              <rect width="900" height="600" fill="url(#p1-sun)"/>
+              <!-- Architectural wall planes -->
+              <polygon points="0,600 0,180 320,120 320,600" fill="#cdc5b9"/>
+              <polygon points="320,120 900,90 900,600 320,600" fill="url(#p1-wall)"/>
+              <!-- Horizontal shadow band -->
+              <rect x="0" y="490" width="900" height="110" fill="#1a1510" opacity="0.08"/>
+              <!-- Ground plane with reflection hint -->
+              <rect x="0" y="560" width="900" height="40" fill="#c0b8ac" opacity="0.3"/>
+              <!-- Pivot door — tall, dark, architectural -->
+              <rect x="370" y="95" width="120" height="415" fill="url(#p1-door)"/>
+              <!-- Door frame reveal -->
+              <rect x="365" y="90" width="5"   height="425" fill="#1a1510" opacity="0.5"/>
+              <rect x="490" y="90" width="5"   height="425" fill="#1a1510" opacity="0.3"/>
+              <rect x="365" y="90" width="130" height="5"   fill="#1a1510" opacity="0.4"/>
+              <!-- Door handle — gold lever on rose -->
+              <circle cx="475" cy="335" r="7" fill="#c8b07a"/>
+              <circle cx="475" cy="335" r="4.5" fill="#d4bc8e"/>
+              <rect x="475" y="308" width="6.5" height="27" rx="3" fill="#c8b07a"/>
+              <rect x="464" y="305" width="28"  height="7"  rx="3.5" fill="#d4bc8e"/>
+              <!-- Door glass panel strip -->
+              <rect x="400" y="120" width="60" height="150" fill="#b0c8d8" opacity="0.25"/>
+              <rect x="402" y="122" width="56" height="146" fill="url(#p1-light)" opacity="0.3"/>
+              <!-- Lighting slot in ceiling -->
+              <rect x="310" y="118" width="4" height="380" fill="#f0e8d8" opacity="0.5"/>
+              <!-- Shadow cast by door -->
+              <polygon points="490,510 490,600 550,600 510,510" fill="#1a1510" opacity="0.06"/>
+              <!-- Landscape glimpse behind door -->
+              <ellipse cx="430" cy="250" rx="55" ry="90" fill="#a8b898" opacity="0.18"/>
+              <!-- Ground line -->
+              <line x1="0" y1="510" x2="900" y2="510" stroke="#9a9088" stroke-width="0.5" opacity="0.3"/>
+            </svg></div>
+          <div class="proj-panel-overlay"></div>
+        </div>
+        <div class="proj-panel-info">
+          <span class="proj-cat">Residential</span>
+          <h3>Private Villas</h3>
+          <p>Bespoke pivot doors, concealed hinges, and monolithic pull bars for high-end residential architecture.</p>
+          <a class="proj-link" href="#">View application ↗</a>
+        </div>
+      </div>
+
+      <!-- Panel 2: Hospitality -->
+      <div class="proj-panel proj-panel--reverse" data-proj="hospitality">
+        <div class="proj-panel-media">
+          <div class="proj-panel-img" id="proj-img-2">
+            <svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+              <defs>
+                <linearGradient id="p2-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%"   stop-color="#1a1c20"/>
+                  <stop offset="60%"  stop-color="#252830"/>
+                  <stop offset="100%" stop-color="#1a1c20"/>
+                </linearGradient>
+                <radialGradient id="p2-glow1" cx="30%" cy="50%" r="40%">
+                  <stop offset="0%"   stop-color="#c8a860" stop-opacity="0.22"/>
+                  <stop offset="100%" stop-color="#c8a860" stop-opacity="0"/>
+                </radialGradient>
+                <radialGradient id="p2-glow2" cx="70%" cy="40%" r="35%">
+                  <stop offset="0%"   stop-color="#d8c8a0" stop-opacity="0.16"/>
+                  <stop offset="100%" stop-color="#d8c8a0" stop-opacity="0"/>
+                </radialGradient>
+                <linearGradient id="p2-floor" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%"   stop-color="#2a2820" stop-opacity="0.6"/>
+                  <stop offset="100%" stop-color="#1a1810" stop-opacity="1"/>
+                </linearGradient>
+              </defs>
+              <!-- Dark luxury lobby background -->
+              <rect width="900" height="600" fill="url(#p2-bg)"/>
+              <!-- Ambient glow pools from pendant lights -->
+              <rect width="900" height="600" fill="url(#p2-glow1)"/>
+              <rect width="900" height="600" fill="url(#p2-glow2)"/>
+              <!-- Marble floor -->
+              <rect x="0" y="420" width="900" height="180" fill="url(#p2-floor)"/>
+              <!-- Floor reflection of lights -->
+              <ellipse cx="270" cy="480" rx="80" ry="20" fill="#c8a860" opacity="0.08"/>
+              <ellipse cx="630" cy="470" rx="65" ry="18" fill="#c8a860" opacity="0.06"/>
+              <!-- Vertical columns -->
+              <rect x="180" y="0" width="18" height="600" fill="#2e3038" opacity="0.8"/>
+              <rect x="181" y="0" width="3"  height="600" fill="#c8a860" opacity="0.12"/>
+              <rect x="700" y="0" width="18" height="600" fill="#2e3038" opacity="0.8"/>
+              <rect x="701" y="0" width="3"  height="600" fill="#c8a860" opacity="0.12"/>
+              <!-- Pendant light fixtures -->
+              <line x1="270" y1="0" x2="270" y2="120" stroke="#c8a860" stroke-width="1" opacity="0.4"/>
+              <ellipse cx="270" cy="128" rx="24" ry="10" fill="#d8b870" opacity="0.9"/>
+              <ellipse cx="270" cy="125" rx="20" ry="7"  fill="#f0d890" opacity="0.7"/>
+              <line x1="630" y1="0" x2="630" y2="95"  stroke="#c8a860" stroke-width="1" opacity="0.4"/>
+              <ellipse cx="630" cy="103" rx="20" ry="8" fill="#d8b870" opacity="0.8"/>
+              <ellipse cx="630" cy="101" rx="16" ry="6" fill="#f0d890" opacity="0.6"/>
+              <!-- Reception desk -->
+              <rect x="280" y="360" width="340" height="65" rx="2" fill="#1e1c18"/>
+              <rect x="280" y="360" width="340" height="4"  rx="1" fill="#c8a860" opacity="0.5"/>
+              <rect x="282" y="364" width="336" height="59" fill="#252218" opacity="0.8"/>
+              <!-- Gold desk edge strip -->
+              <rect x="279" y="422" width="342" height="3" fill="#c8a860" opacity="0.3"/>
+              <!-- Wall panel behind reception -->
+              <rect x="250" y="80" width="400" height="280" fill="#1e2028" opacity="0.6"/>
+              <rect x="250" y="80" width="400" height="2" fill="#c8a860" opacity="0.2"/>
+              <rect x="250" y="360" width="400" height="2" fill="#c8a860" opacity="0.2"/>
+              <!-- Monogram / logo area -->
+              <text x="450" y="230" text-anchor="middle" font-family="serif" font-size="36" fill="#c8a860" opacity="0.3" letter-spacing="8">KM</text>
+              <!-- Door hardware on side doors -->
+              <rect x="195" y="220" width="3" height="60" rx="1.5" fill="#c8a860" opacity="0.7"/>
+              <circle cx="196.5" cy="215" r="4.5" fill="#c8a860" opacity="0.6"/>
+            </svg></div>
+          <div class="proj-panel-overlay"></div>
+        </div>
+        <div class="proj-panel-info">
+          <span class="proj-cat">Hospitality</span>
+          <h3>Hotels &amp; Resorts</h3>
+          <p>Guest room hardware, lobby installations, and lighting systems that set the tone of arrival.</p>
+          <a class="proj-link" href="#">View application ↗</a>
+        </div>
+      </div>
+
+      <!-- Panel 3: Commercial -->
+      <div class="proj-panel" data-proj="commercial">
+        <div class="proj-panel-media">
+          <div class="proj-panel-img" id="proj-img-3">
+            <svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+              <defs>
+                <linearGradient id="p3-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%"   stop-color="#f4f2ee"/>
+                  <stop offset="100%" stop-color="#e8e4de"/>
+                </linearGradient>
+                <linearGradient id="p3-glass" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%"   stop-color="#c8d8e8" stop-opacity="0.3"/>
+                  <stop offset="40%"  stop-color="#e8f0f8" stop-opacity="0.5"/>
+                  <stop offset="100%" stop-color="#c8d8e8" stop-opacity="0.2"/>
+                </linearGradient>
+                <linearGradient id="p3-vert" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%"   stop-color="#d8d0c8"/>
+                  <stop offset="100%" stop-color="#c4bdb5"/>
+                </linearGradient>
+              </defs>
+              <!-- Office interior — bright, minimalist -->
+              <rect width="900" height="600" fill="url(#p3-bg)"/>
+              <!-- Ceiling plane -->
+              <rect x="0" y="0" width="900" height="70" fill="#eae6e0" opacity="0.8"/>
+              <!-- Recessed lighting strips -->
+              <rect x="120" y="30" width="200" height="3" fill="white" opacity="0.9"/>
+              <rect x="120" y="30" width="200" height="8" fill="white" opacity="0.15"/>
+              <rect x="580" y="30" width="200" height="3" fill="white" opacity="0.9"/>
+              <rect x="580" y="30" width="200" height="8" fill="white" opacity="0.15"/>
+              <!-- Floor-to-ceiling glazing partition system -->
+              <!-- Outer frame -->
+              <rect x="150" y="70" width="600" height="440" fill="url(#p3-glass)"/>
+              <!-- Vertical mullions — aluminium extrusions -->
+              <rect x="150" y="70" width="8"   height="440" fill="url(#p3-vert)"/>
+              <rect x="346" y="70" width="8"   height="440" fill="url(#p3-vert)"/>
+              <rect x="546" y="70" width="8"   height="440" fill="url(#p3-vert)"/>
+              <rect x="742" y="70" width="8"   height="440" fill="url(#p3-vert)"/>
+              <!-- Horizontal rails -->
+              <rect x="150" y="70"  width="600" height="7" fill="#c0b8b0"/>
+              <rect x="150" y="280" width="600" height="5" fill="#c8c0b8" opacity="0.6"/>
+              <rect x="150" y="505" width="600" height="5" fill="#c0b8b0"/>
+              <!-- Glass panel tint/reflection -->
+              <rect x="158" y="77"  width="188" height="428" fill="#d8e8f4" opacity="0.15"/>
+              <rect x="354" y="77"  width="188" height="203" fill="#d0e4f0" opacity="0.2"/>
+              <rect x="554" y="77"  width="188" height="428" fill="#d8e8f4" opacity="0.12"/>
+              <!-- Glass reflections — diagonal -->
+              <polygon points="163,80 230,80 163,160" fill="white" opacity="0.08"/>
+              <polygon points="556,80 610,80 556,140" fill="white" opacity="0.08"/>
+              <!-- Sliding door panel -->
+              <rect x="346" y="285" width="200" height="220" fill="#c8d8e8" opacity="0.35"/>
+              <rect x="346" y="285" width="200" height="3"   fill="#a8b8c8" opacity="0.6"/>
+              <!-- Pull handle on glass door -->
+              <rect x="530" y="370" width="5"  height="60" rx="2.5" fill="#a8a0a0"/>
+              <rect x="525" y="369" width="15" height="5"  rx="2.5" fill="#b8b0a8"/>
+              <rect x="525" y="424" width="15" height="5"  rx="2.5" fill="#b8b0a8"/>
+              <!-- Floor -->
+              <rect x="0" y="510" width="900" height="90" fill="#d8d2ca" opacity="0.6"/>
+              <!-- Floor grid lines -->
+              <line x1="0" y1="510" x2="900" y2="510" stroke="#c0b8b0" stroke-width="0.6"/>
+              <line x1="300" y1="510" x2="300" y2="600" stroke="#c0b8b0" stroke-width="0.4" opacity="0.4"/>
+              <line x1="600" y1="510" x2="600" y2="600" stroke="#c0b8b0" stroke-width="0.4" opacity="0.4"/>
+            </svg></div>
+          <div class="proj-panel-overlay"></div>
+        </div>
+        <div class="proj-panel-info">
+          <span class="proj-cat">Commercial</span>
+          <h3>Commercial Interiors</h3>
+          <p>Aluminium partition systems, frameless glass fittings, and integrated LED profiles for workspaces.</p>
+          <a class="proj-link" href="#">View application ↗</a>
+        </div>
+      </div>
+
+      <!-- Panel 4: Joinery -->
+      <div class="proj-panel proj-panel--reverse" data-proj="joinery">
+        <div class="proj-panel-media">
+          <div class="proj-panel-img" id="proj-img-4">
+            <svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+              <defs>
+                <linearGradient id="p4-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%"   stop-color="#e8e0d4"/>
+                  <stop offset="100%" stop-color="#d4ccc0"/>
+                </linearGradient>
+                <linearGradient id="p4-wood1" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%"   stop-color="#5a4030"/>
+                  <stop offset="30%"  stop-color="#6a5040"/>
+                  <stop offset="55%"  stop-color="#4e3828"/>
+                  <stop offset="80%"  stop-color="#6a5040"/>
+                  <stop offset="100%" stop-color="#5a4030"/>
+                </linearGradient>
+                <linearGradient id="p4-brass" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%"   stop-color="#8a7050"/>
+                  <stop offset="40%"  stop-color="#c8a870"/>
+                  <stop offset="60%"  stop-color="#e8c890"/>
+                  <stop offset="100%" stop-color="#a08860"/>
+                </linearGradient>
+                <radialGradient id="p4-light" cx="55%" cy="20%" r="50%">
+                  <stop offset="0%"   stop-color="#f8f0e4" stop-opacity="0.5"/>
+                  <stop offset="100%" stop-color="#e8e0d4" stop-opacity="0"/>
+                </radialGradient>
+              </defs>
+              <!-- Warm joinery/cabinet room -->
+              <rect width="900" height="600" fill="url(#p4-bg)"/>
+              <rect width="900" height="600" fill="url(#p4-light)"/>
+              <!-- Wall panel mouldings -->
+              <rect x="0"   y="0"   width="900" height="60"  fill="#dcd4c8"/>
+              <rect x="0"   y="540" width="900" height="60"  fill="#ccc4b8"/>
+              <rect x="0"   y="57"  width="900" height="3"   fill="#b8b0a4" opacity="0.4"/>
+              <rect x="0"   y="540" width="900" height="3"   fill="#b8b0a4" opacity="0.3"/>
+              <!-- Custom joinery unit — full-height cabinetry -->
+              <rect x="60"  y="60"  width="240" height="480" fill="#6a5040"/>
+              <!-- Wood grain lines subtle -->
+              <line x1="80"  y1="60" x2="80"  y2="540" stroke="#5a4030" stroke-width="0.5" opacity="0.5"/>
+              <line x1="130" y1="60" x2="130" y2="540" stroke="#785848" stroke-width="0.4" opacity="0.3"/>
+              <line x1="200" y1="60" x2="200" y2="540" stroke="#5a4030" stroke-width="0.5" opacity="0.4"/>
+              <line x1="265" y1="60" x2="265" y2="540" stroke="#785848" stroke-width="0.4" opacity="0.3"/>
+              <!-- Cabinet door reveals -->
+              <rect x="65"  y="65"  width="110" height="215" fill="#5a4030" stroke="#7a6050" stroke-width="0.5"/>
+              <rect x="185" y="65"  width="110" height="215" fill="#5a4030" stroke="#7a6050" stroke-width="0.5"/>
+              <rect x="65"  y="290" width="110" height="245" fill="#5a4030" stroke="#7a6050" stroke-width="0.5"/>
+              <rect x="185" y="290" width="110" height="245" fill="#5a4030" stroke="#7a6050" stroke-width="0.5"/>
+              <!-- Cabinet brass handles — mini pull bars -->
+              <rect x="113" y="168" width="14" height="32" rx="2" fill="url(#p4-brass)"/>
+              <rect x="233" y="168" width="14" height="32" rx="2" fill="url(#p4-brass)"/>
+              <rect x="113" y="403" width="14" height="32" rx="2" fill="url(#p4-brass)"/>
+              <rect x="233" y="403" width="14" height="32" rx="2" fill="url(#p4-brass)"/>
+              <!-- Highlight on handles -->
+              <rect x="117" y="170" width="4" height="28" rx="1" fill="white" opacity="0.2"/>
+              <rect x="237" y="170" width="4" height="28" rx="1" fill="white" opacity="0.2"/>
+              <!-- Main door with recessed panel -->
+              <rect x="380" y="60"  width="200" height="480" fill="url(#p4-wood1)"/>
+              <rect x="395" y="80"  width="170" height="200" fill="#4e3828" opacity="0.5"/>
+              <rect x="395" y="300" width="170" height="220" fill="#4e3828" opacity="0.5"/>
+              <!-- Door frame -->
+              <rect x="376" y="56"  width="5"   height="490" fill="#3a2818"/>
+              <rect x="580" y="56"  width="5"   height="490" fill="#2e2010"/>
+              <!-- Main door handle — polished brass lever on rose -->
+              <circle cx="555" cy="310" r="12" fill="url(#p4-brass)"/>
+              <circle cx="555" cy="310" r="8"  fill="#d4b870"/>
+              <rect x="551" y="280" width="8"  height="30" rx="4" fill="url(#p4-brass)"/>
+              <rect x="534" y="277" width="42" height="7" rx="3.5" fill="#c8a860"/>
+              <!-- Handle highlight -->
+              <rect x="553" y="281" width="3" height="26" rx="1.5" fill="white" opacity="0.25"/>
+              <!-- Skirting board -->
+              <rect x="0" y="545" width="900" height="15" fill="#c8c0b4"/>
+            </svg></div>
+          <div class="proj-panel-overlay"></div>
+        </div>
+        <div class="proj-panel-info">
+          <span class="proj-cat">Joinery</span>
+          <h3>Joinery Applications</h3>
+          <p>Premium cabinet hardware, soft-close drawer systems, and furniture pulls for bespoke joinery studios.</p>
+          <a class="proj-link" href="#">View application ↗</a>
+        </div>
+      </div>
+
+    </div><!-- /proj-panels -->
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       MARQUEE STRIP
+  ══════════════════════════════════════════════════ -->
+  <div class="marquee-wrap">
+    <div class="marquee-track" id="marquee-track">
+      <div class="marquee-inner">
+        <span>Door Hardware</span><span class="m-sep">·</span>
+        <span>Furniture Fittings</span><span class="m-sep">·</span>
+        <span>Aluminium Profiles</span><span class="m-sep">·</span>
+        <span>Lighting Systems</span><span class="m-sep">·</span>
+        <span>Precision Engineering</span><span class="m-sep">·</span>
+        <span>German Design</span><span class="m-sep">·</span>
+        <span>Door Hardware</span><span class="m-sep">·</span>
+        <span>Furniture Fittings</span><span class="m-sep">·</span>
+        <span>Aluminium Profiles</span><span class="m-sep">·</span>
+        <span>Lighting Systems</span><span class="m-sep">·</span>
+        <span>Precision Engineering</span><span class="m-sep">·</span>
+        <span>German Design</span><span class="m-sep">·</span>
+      </div>
+      <div class="marquee-inner" aria-hidden="true">
+        <span>Door Hardware</span><span class="m-sep">·</span>
+        <span>Furniture Fittings</span><span class="m-sep">·</span>
+        <span>Aluminium Profiles</span><span class="m-sep">·</span>
+        <span>Lighting Systems</span><span class="m-sep">·</span>
+        <span>Precision Engineering</span><span class="m-sep">·</span>
+        <span>German Design</span><span class="m-sep">·</span>
+        <span>Door Hardware</span><span class="m-sep">·</span>
+        <span>Furniture Fittings</span><span class="m-sep">·</span>
+        <span>Aluminium Profiles</span><span class="m-sep">·</span>
+        <span>Lighting Systems</span><span class="m-sep">·</span>
+        <span>Precision Engineering</span><span class="m-sep">·</span>
+        <span>German Design</span><span class="m-sep">·</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════ -->
+  <footer id="contact">
+    <div class="footer-top">
+      <div class="footer-brand">KÖMPANIE</div>
+      <div class="footer-tagline">Precision in Motion</div>
+    </div>
+
+    <div class="footer-mid">
+      <div class="footer-col">
+        <h5>Products</h5>
+        <ul>
+          <li><a href="#">Door Hardware</a></li>
+          <li><a href="#">Furniture Fittings</a></li>
+          <li><a href="#">Aluminium Profiles</a></li>
+          <li><a href="#">Lighting Systems</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#">About KÖMPANIE</a></li>
+          <li><a href="#">Catalogue</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Distributors</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:info@kompanie.com">info@kompanie.com</a></li>
+          <li><a href="#">+49 89 000 0000</a></li>
+          <li><a href="#">Munich, Germany</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-col--social">
+        <h5>Follow</h5>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Pinterest</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2024 KÖMPANIE GmbH. All rights reserved.</span>
+      <span>Designed with precision.</span>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════════════════════════════════
+       SCRIPTS — loaded after body
+  ══════════════════════════════════════════════════ -->
+  <script src="script.js"></script>
+</body>
+</html>
