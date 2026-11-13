@@ -1,0 +1,43 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Inter Black,84,&H00FFFFFF,&H00FFFFFF,&H002E1D2B,&H64000000,0,0,0,0,100,100,2,0,1,8,4,8,110,170,845,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:03.05,0:00:03.92,Caption,nuggo,0,0,0,,{\fscx70\fscy70\t(0,90,\fscx106\fscy106)\t(90,160,\fscx100\fscy100)\1c&H003CC9FF}BRICKLEY! I HAVE
+Dialogue: 0,0:00:03.92,0:00:04.79,Caption,nuggo,0,0,0,,{\fscx70\fscy70\t(0,90,\fscx106\fscy106)\t(90,160,\fscx100\fscy100)\1c&H003CC9FF}SOLVED MORNINGS!
+Dialogue: 0,0:00:05.09,0:00:06.22,Caption,brickley,0,0,0,,{\fscx70\fscy70\t(0,90,\fscx106\fscy106)\t(90,160,\fscx100\fscy100)\1c&H00F5EEDC}IT'S THREE IN THE
+Dialogue: 0,0:00:06.22,0:00:06.89,Caption,brickley,0,0,0,,{\fscx70\fscy70\t(0,90,\fscx106\fscy106)\t(90,160,\fscx100\fscy100)\1c&H00F5EEDC}AFTERNOON.
+Dialogue: 0,0:00:07.19,0:00:08.09,Caption,nuggo,0,0,0,,{\fscx70\fscy70\t(0,90,\fscx106\fscy106)\t(90,160,\fscx100\fscy100)\1c&H003CC9FF}EXACTLY! I SLEPT
+Dialogue: 0,0:00:08.09,0:00:09.04,Caption,nuggo,0,0,0,,{\fscx70\fscy70\t(0,90,\fscx106\fscy106)\t(90,160,\fscx100\fscy100)\1c&H003CC9FF}RIGHT THROUGH THE
+Dialogue: 0,0:00:09.04,0:00:09.49,Caption,nuggo,0,0,0,,{\fscx70\fscy70\t(0,90,\fscx106\fscy106)\t(90,160,\fscx100\fscy100)\1c&H003CC9FF}PROBLEM.
+Dialogue: 0,0:00:10.23,0:00:10.68,Caption,nuggo,0,0,0,,{\fscx70\fscy70\t(0,90,\fscx106\fscy106)\t(90,160,\fscx100\fscy100)\1c&H003CC9FF}BEHOLD!
+Dialogue: 0,0:00:11.78,0:00:11.95,Caption,nuggo,0,0,0,,{\fscx70\fscy70\t(0,90,\fscx106\fscy106)\t(90,160,\fscx100\fscy100)\1c&H003CC9FF}THE
+Dialogue: 0,0:00:11.95,0:00:12.82,Caption,nuggo,0,0,0,,{\fscx70\fscy70\t(0,90,\fscx106\fscy106)\t(90,160,\fscx100\fscy100)\1c&H003CC9FF}SNOOZE-O-MATIC!
+Dialogue: 0,0:00:13.12,0:00:14.04,Caption,nuggo,0,0,0,,{\fscx70\fscy70\t(0,90,\fscx106\fscy106)\t(90,160,\fscx100\fscy100)\1c&H003CC9FF}IT HITS SNOOZE FOR
+Dialogue: 0,0:00:14.04,0:00:14.91,Caption,nuggo,0,0,0,,{\fscx70\fscy70\t(0,90,\fscx106\fscy106)\t(90,160,\fscx100\fscy100)\1c&H003CC9FF}YOU, SO YOU NEVER
+Dialogue: 0,0:00:14.91,0:00:15.73,Caption,nuggo,0,0,0,,{\fscx70\fscy70\t(0,90,\fscx106\fscy106)\t(90,160,\fscx100\fscy100)\1c&H003CC9FF}HAVE TO WAKE UP!
+Dialogue: 0,0:00:16.03,0:00:17.08,Caption,brickley,0,0,0,,{\fscx70\fscy70\t(0,90,\fscx106\fscy106)\t(90,160,\fscx100\fscy100)\1c&H00F5EEDC}SO IT'S A BOX
+Dialogue: 0,0:00:17.08,0:00:18.22,Caption,brickley,0,0,0,,{\fscx70\fscy70\t(0,90,\fscx106\fscy106)\t(90,160,\fscx100\fscy100)\1c&H00F5EEDC}THAT MAKES YOU
+Dialogue: 0,0:00:18.22,0:00:18.62,Caption,brickley,0,0,0,,{\fscx70\fscy70\t(0,90,\fscx106\fscy106)\t(90,160,\fscx100\fscy100)\1c&H00F5EEDC}LATE.
+Dialogue: 0,0:00:18.92,0:00:19.74,Caption,nuggo,0,0,0,,{\fscx70\fscy70\t(0,90,\fscx106\fscy106)\t(90,160,\fscx100\fscy100)\1c&H003CC9FF}EFFICIENTLY LATE!
+Dialogue: 0,0:00:20.48,0:00:21.22,Caption,nuggo,0,0,0,,{\fscx70\fscy70\t(0,90,\fscx106\fscy106)\t(90,160,\fscx100\fscy100)\1c&H003CC9FF}WATCH THIS!
+Dialogue: 0,0:00:23.92,0:00:24.91,Caption,nuggo,0,0,0,,{\fscx70\fscy70\t(0,90,\fscx106\fscy106)\t(90,160,\fscx100\fscy100)\1c&H003CC9FF}HA! IT WORKS!
+Dialogue: 0,0:00:26.36,0:00:27.10,Caption,nuggo,0,0,0,,{\fscx70\fscy70\t(0,90,\fscx106\fscy106)\t(90,160,\fscx100\fscy100)\1c&H003CC9FF}PHASE ONE...
+Dialogue: 0,0:00:27.10,0:00:28.08,Caption,nuggo,0,0,0,,{\fscx70\fscy70\t(0,90,\fscx106\fscy106)\t(90,160,\fscx100\fscy100)\1c&H003CC9FF}A TOTAL SUCCESS.
+Dialogue: 0,0:00:29.22,0:00:30.24,Caption,brickley,0,0,0,,{\fscx70\fscy70\t(0,90,\fscx106\fscy106)\t(90,160,\fscx100\fscy100)\1c&H00F5EEDC}DOES IT HAVE AN
+Dialogue: 0,0:00:30.24,0:00:30.99,Caption,brickley,0,0,0,,{\fscx70\fscy70\t(0,90,\fscx106\fscy106)\t(90,160,\fscx100\fscy100)\1c&H00F5EEDC}OFF SWITCH?
+Dialogue: 0,0:00:31.29,0:00:32.21,Caption,nuggo,0,0,0,,{\fscx70\fscy70\t(0,90,\fscx106\fscy106)\t(90,160,\fscx100\fscy100)\1c&H003CC9FF}OFF SWITCHES ARE
+Dialogue: 0,0:00:32.21,0:00:32.96,Caption,nuggo,0,0,0,,{\fscx70\fscy70\t(0,90,\fscx106\fscy106)\t(90,160,\fscx100\fscy100)\1c&H003CC9FF}FOR QUITTERS!
+Dialogue: 0,0:00:35.85,0:00:36.88,Caption,nuggo,0,0,0,,{\fscx70\fscy70\t(0,90,\fscx106\fscy106)\t(90,160,\fscx100\fscy100)\1c&H003CC9FF}SEE? NOW IT'S WELL
+Dialogue: 0,0:00:36.88,0:00:37.28,Caption,nuggo,0,0,0,,{\fscx70\fscy70\t(0,90,\fscx106\fscy106)\t(90,160,\fscx100\fscy100)\1c&H003CC9FF}RESTED.
+Dialogue: 0,0:00:37.88,0:00:39.30,Caption,brickley,0,0,0,,{\fscx70\fscy70\t(0,90,\fscx106\fscy106)\t(90,160,\fscx100\fscy100)\1c&H00F5EEDC}SUBSCRIBE, BEFORE
+Dialogue: 0,0:00:39.30,0:00:40.13,Caption,brickley,0,0,0,,{\fscx70\fscy70\t(0,90,\fscx106\fscy106)\t(90,160,\fscx100\fscy100)\1c&H00F5EEDC}HE INVENTS
+Dialogue: 0,0:00:40.13,0:00:40.96,Caption,brickley,0,0,0,,{\fscx70\fscy70\t(0,90,\fscx106\fscy106)\t(90,160,\fscx100\fscy100)\1c&H00F5EEDC}BREAKFAST.
