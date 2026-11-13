@@ -1,0 +1,260 @@
+{
+  "id": "w001",
+  "channel": "world",
+  "brand": "N4V3D WORLD",
+  "format": "short",
+  "orientation": "vertical",
+  "title": "How Did Humans Invent Money?",
+  "target_duration": 60,
+  "persona": "history",
+  "narrator": {
+    "provider": "kokoro",
+    "voice": "bm_george",
+    "speed": 1.04
+  },
+  "music": {
+    "style": "ancient_pad",
+    "gain_db": -21
+  },
+  "direction": {
+    "treatment": "A dusk-lit journey from a Mesopotamian city to a Lydian mint to a modern banking screen. The visual throughline is the ledger: clay tablet → coin → digital ledger. Every reconstruction is labelled; maps are simplified.",
+    "style": "Painterly flat illustration with atmospheric gradients, warm dusk light, layered parallax silhouettes.",
+    "palette": {
+      "sky_top": "#1B1033",
+      "sky_low": "#E9854A",
+      "sand": "#C9A26B",
+      "brick": "#9C6A44",
+      "clay": "#B98A5E",
+      "silver": "#D9DDE3",
+      "electrum": "#E3C15C",
+      "accent": "#FFD27A"
+    },
+    "typography": "Inter Black for titles, Inter ExtraBold captions in the lower third; dates in small caps chips.",
+    "camera": "Slow parallax push-ins on landscapes; locked-off for diagrams; a single coin-strike punch.",
+    "transitions": "Cross-dissolves; match-cut from clay tablet to phone ledger at the end.",
+    "lighting": "Golden-hour key, cool ambient shadows, warm glow on metal.",
+    "sfx": "Wind and distant market ambience, stylus taps on clay, metallic coin strike, soft UI tick.",
+    "safety": "Badge 'Artistic reconstruction' on every reconstructed scene; 'Simplified map'; on-screen hedge where evidence is debated."
+  },
+  "segments": [
+    {
+      "stage": "hook",
+      "scene": "mesopotamia_city",
+      "claims": [
+        "H1"
+      ],
+      "text": "Nearly 4,000 years ago, Mesopotamians lent silver at 20 percent interest."
+    },
+    {
+      "stage": "question",
+      "scene": "no_coins_timeline",
+      "claims": [
+        "H2"
+      ],
+      "text": "Yet the first coins wouldn't appear for over a thousand years. So how did money begin?"
+    },
+    {
+      "stage": "discovery",
+      "scene": "barter_myth",
+      "claims": [
+        "H3"
+      ],
+      "text": "The classic story says people bartered, a goat for some grain. But no one has ever documented a society that ran on barter alone."
+    },
+    {
+      "stage": "discovery",
+      "scene": "clay_ledger",
+      "claims": [
+        "H4"
+      ],
+      "text": "Instead, Mesopotamian scribes recorded debts on clay tablets, measured in silver and barley. A shekel was a weight of silver, about eight grams."
+    },
+    {
+      "stage": "surprise",
+      "scene": "credit_web",
+      "claims": [
+        "H5"
+      ],
+      "text": "So money may have started as a record of who owed what. Historians still debate the details."
+    },
+    {
+      "stage": "payoff",
+      "scene": "lydia_coin",
+      "claims": [
+        "H6"
+      ],
+      "text": "Then, in the late six hundreds BCE, in Lydia, in modern Turkey, people stamped lumps of electrum, a natural gold and silver alloy. The first coins."
+    },
+    {
+      "stage": "final",
+      "scene": "modern_ledger",
+      "claims": [
+        "H7"
+      ],
+      "text": "Today, the Bank of England estimates most money is bank deposits. Numbers in a ledger, a lot like a clay tablet."
+    }
+  ],
+  "sources": [
+    {
+      "id": "R1",
+      "kind": "museum",
+      "title": "Mesopotamian clay tablets (Money Museum, display cases 1–3)",
+      "publisher": "Banca d'Italia",
+      "year": "n.d.",
+      "url": "https://www.bancaditalia.it/servizi-cittadino/musei-e-visite/museo-moneta/tavolette-mesopotamiche/index.html?com.dotmarketing.htmlpage.language=1"
+    },
+    {
+      "id": "R2",
+      "kind": "archaeology",
+      "title": "The Coins of Sardis (J. H. Kroll)",
+      "publisher": "Archaeological Exploration of Sardis",
+      "year": "n.d.",
+      "url": "https://sardisexpedition.org/en/essays/latw-kroll-coins-of-sardis"
+    },
+    {
+      "id": "R3",
+      "kind": "peer-reviewed",
+      "title": "Barter and Economic Disintegration (C. Humphrey)",
+      "publisher": "Man, 20(1), 48–72",
+      "year": 1985,
+      "url": "https://www.jstor.org/stable/2802221"
+    },
+    {
+      "id": "R4",
+      "kind": "working paper",
+      "title": "Barter and the Origin of Money and Some Insights from the Ancient Palatial Economies of Mesopotamia and Egypt (Svizzero & Tisdell)",
+      "publisher": "HAL hal-02274856",
+      "year": 2019,
+      "url": "https://hal.science/hal-02274856v1/document"
+    },
+    {
+      "id": "R5",
+      "kind": "central bank",
+      "title": "Money creation in the modern economy (McLeay, Radia & Thomas)",
+      "publisher": "Bank of England Quarterly Bulletin 2014 Q1",
+      "year": 2014,
+      "url": "https://www.bankofengland.co.uk/quarterly-bulletin/2014/q1/money-creation-in-the-modern-economy"
+    },
+    {
+      "id": "R6",
+      "kind": "encyclopedia",
+      "title": "History of money",
+      "publisher": "Wikipedia (orientation only; claims verified against R1–R5)",
+      "year": 2026,
+      "url": "https://en.wikipedia.org/wiki/History_of_money"
+    }
+  ],
+  "claims": [
+    {
+      "id": "H1",
+      "text": "Mesopotamian law codes (c. 1800 BCE, Eshnunna and Hammurabi) set interest on silver loans at 20%.",
+      "sources": [
+        "R1"
+      ],
+      "status": "verified",
+      "checked_by": "research-agent",
+      "evidence": "Mesopotamians made loans of silver or barley at interest rates set by law - under the Ana-Ittisu laws (end of 3rd millennium B.C.), the code of Eshnunna (around 1800 B.C.) and the code of Hammurabi (18th century B.C.) - of 20% for silver and 30% for barley."
+    },
+    {
+      "id": "H2",
+      "text": "The earliest coins date to the later 7th century BCE — more than a thousand years after c. 1800 BCE.",
+      "sources": [
+        "R2"
+      ],
+      "status": "verified",
+      "checked_by": "research-agent",
+      "evidence": "archaeologists from the British Museum discovered ninety-three electrum coins that had been deposited as offerings during the latter part of the seventh century BCE."
+    },
+    {
+      "id": "H3",
+      "text": "No pure barter economy has ever been documented ethnographically.",
+      "sources": [
+        "R3",
+        "R4"
+      ],
+      "status": "verified",
+      "checked_by": "research-agent",
+      "evidence": "No example of a barter economy, pure and simple, has ever been described, let alone the emergence from it of money; all available ethnography suggests that there never has been such a thing."
+    },
+    {
+      "id": "H4",
+      "text": "Silver and barley served as units of account and media of exchange in Mesopotamia; one shekel ≈ 8.3 g of silver; loans were recorded on clay tablets.",
+      "sources": [
+        "R1"
+      ],
+      "status": "verified",
+      "checked_by": "research-agent",
+      "evidence": "since the 3rd millennium B.C., silver and barley ... were used as medium of exchange, a unit of account, and a store of value ... 1 shekel (= 8.3 grams)"
+    },
+    {
+      "id": "H5",
+      "text": "Money may have originated in credit/accounting rather than as a physical medium; the question is debated.",
+      "sources": [
+        "R4",
+        "R6"
+      ],
+      "status": "interpretation",
+      "hedged": true,
+      "checked_by": "research-agent",
+      "evidence": "barter is usually ill-defined and archaeological evidence about it is inconclusive ... non-monetary transactions have persisted during millennia (R4); any story of how money first developed is mostly based on conjecture and logical inference (R6)."
+    },
+    {
+      "id": "H6",
+      "text": "The first coins were made of electrum (natural gold-silver alloy) in Lydia (western Turkey) in the later 7th century BCE.",
+      "sources": [
+        "R2"
+      ],
+      "status": "verified",
+      "checked_by": "research-agent",
+      "evidence": "All earlier coins had been made exclusively of the gold-silver alloy known as electrum ... these earliest coins were inscribed with Lydian names ... minted in Lydia by Lydians. An alloy in which gold occurs naturally"
+    },
+    {
+      "id": "H7",
+      "text": "In 2014 the Bank of England estimated bank deposits make up about 97% of money in circulation in the UK.",
+      "sources": [
+        "R5"
+      ],
+      "status": "verified",
+      "checked_by": "research-agent",
+      "evidence": "[bank deposits] make up the vast majority — 97% of the amount currently in circulation."
+    }
+  ],
+  "review": {
+    "author": "writer-agent",
+    "fact_checker": "research-agent",
+    "expert_review": {
+      "required": false,
+      "status": "not_required",
+      "reviewer": null,
+      "date": null,
+      "notes": "Recommended: a historian/numismatist spot-check before the first upload."
+    }
+  },
+  "seo": {
+    "keywords": [
+      "money",
+      "history of money",
+      "first coins",
+      "barter",
+      "Mesopotamia"
+    ],
+    "titles": [
+      "How Did Humans Invent Money?",
+      "Money Is Older Than Coins",
+      "The Barter Myth: Where Money Really Came From"
+    ],
+    "description": "Long before coins, Mesopotamian scribes recorded debts in silver and barley on clay tablets. The first coins appeared in Lydia in the late 7th century BCE — and today most money is, once again, numbers in a ledger.\n\nReconstructions are artistic interpretations; maps are simplified. Historians still debate the exact origins of money.",
+    "hashtags": [
+      "#history",
+      "#money",
+      "#ancienthistory",
+      "#economics",
+      "#shorts"
+    ],
+    "thumbnail": {
+      "scene": "lydia_coin",
+      "t": 0.75,
+      "text": "MONEY IS OLDER THAN COINS"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+# systemd unit — Control Center (binds to localhost; expose only through a TLS reverse proxy)
+[Unit]
+Description=N4V3D MEDIA Control Center
+After=network-online.target
+
+[Service]
+Type=simple
+User=n4v3d
+WorkingDirectory=/opt/n4v3d/kompany/n4v3d-media
+Environment=N4V3D_HTTPS=1
+ExecStart=/usr/bin/python3 -m n4v3d_media dashboard --host 127.0.0.1 --port 8787
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

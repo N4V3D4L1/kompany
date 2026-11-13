@@ -1,0 +1,116 @@
+{
+  "id": "w001",
+  "title": "How Did Humans Invent Money?",
+  "channel": "world",
+  "video": "N4V3D_w001_how_did_humans_invent_money_1080x1920.mp4",
+  "duration": 57.38,
+  "frames": 1721,
+  "voice": [
+    "kokoro-neural-tts"
+  ],
+  "fact_gate": {
+    "render_ok": true,
+    "publish_ok": true,
+    "blockers": [],
+    "publish_blockers": [],
+    "warnings": [],
+    "medical": false,
+    "counts": {
+      "claims": 7,
+      "verified": 6,
+      "hedged": 1,
+      "sources": 6
+    }
+  },
+  "story_findings": [
+    "[WARNING] hook: hook narration lasts 5.6s; aim for <= 4 s",
+    "[INFO] pace: 158 words/min (target 135-180)"
+  ],
+  "mix": {
+    "peak_pre_limiter": 0.859
+  },
+  "loudness_pre_norm": {
+    "input_i": "-12.90",
+    "input_tp": "-0.74",
+    "input_lra": "2.30",
+    "input_thresh": "-23.33",
+    "output_i": "-14.32",
+    "output_tp": "-2.12",
+    "output_lra": "1.80",
+    "output_thresh": "-24.67",
+    "normalization_type": "dynamic",
+    "target_offset": "0.32"
+  },
+  "qc_passed": true,
+  "extra_checks": [
+    {
+      "check": "Every segment has narration audio",
+      "passed": true
+    },
+    {
+      "check": "Every segment has captions",
+      "passed": true
+    },
+    {
+      "check": "Captions end before video end",
+      "passed": true
+    },
+    {
+      "check": "Caption chunks <= 32 chars",
+      "passed": true
+    },
+    {
+      "check": "Captions above Shorts UI zone",
+      "passed": true
+    },
+    {
+      "check": "Scene lengths 2.5-15 s",
+      "passed": true
+    }
+  ],
+  "scenes": [
+    {
+      "scene": "mesopotamia_city",
+      "stage": "hook",
+      "t0": 0.0,
+      "t1": 6.15
+    },
+    {
+      "scene": "no_coins_timeline",
+      "stage": "question",
+      "t0": 6.15,
+      "t1": 11.59
+    },
+    {
+      "scene": "barter_myth",
+      "stage": "discovery",
+      "t0": 11.59,
+      "t1": 20.66
+    },
+    {
+      "scene": "clay_ledger",
+      "stage": "discovery",
+      "t0": 20.66,
+      "t1": 30.99
+    },
+    {
+      "scene": "credit_web",
+      "stage": "surprise",
+      "t0": 30.99,
+      "t1": 37.59
+    },
+    {
+      "scene": "lydia_coin",
+      "stage": "payoff",
+      "t0": 37.59,
+      "t1": 48.14
+    },
+    {
+      "scene": "modern_ledger",
+      "stage": "final",
+      "t0": 48.14,
+      "t1": 57.38
+    }
+  ],
+  "render_seconds": 120.2
+}

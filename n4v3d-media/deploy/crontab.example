@@ -1,0 +1,2 @@
+# Alternative to systemd: run one worker pass every 10 minutes (flock prevents overlap)
+*/10 * * * * cd /opt/n4v3d/kompany/n4v3d-media && flock -n /tmp/n4v3d-worker.lock python3 -m n4v3d_media worker --once >> var/worker.log 2>&1

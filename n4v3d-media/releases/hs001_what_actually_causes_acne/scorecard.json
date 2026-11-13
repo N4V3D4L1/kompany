@@ -1,0 +1,87 @@
+{
+  "id": "hs001",
+  "title": "What Actually Causes Acne?",
+  "evaluated": "2026-11-13T13:13:19+00:00",
+  "total": 85,
+  "target": 90,
+  "categories": {
+    "storytelling": {
+      "max": 20,
+      "score": 16,
+      "basis": "provisional self-assessment (pipeline)",
+      "reason": "Six-stage arc present with a concrete hook and a sourced surprise; limited emotional stakes in 60 s."
+    },
+    "visual": {
+      "max": 20,
+      "score": 15,
+      "basis": "provisional self-assessment (pipeline)",
+      "reason": "Clear, consistent, labelled 2D illustration at native 1080x1920; procedural style is clean but not yet premium 3D/rendered quality."
+    },
+    "factual": {
+      "max": 20,
+      "score": 17,
+      "basis": "automated",
+      "reason": "12/12 claims verified against 7 sources, 0 hedged interpretation(s); independent fact-check by research-agent. Max 17 until a human subject-matter reviewer signs off."
+    },
+    "narration_audio": {
+      "max": 15,
+      "score": 13,
+      "basis": "automated",
+      "reason": "neural TTS (kokoro-neural-tts) \u2014 natural but not a human performance; loudness -14.0 LUFS; music ducked under narration"
+    },
+    "editing_pacing": {
+      "max": 10,
+      "score": 10,
+      "basis": "automated",
+      "reason": "automated: pace 159 words/min (target 130-175); hook within 4 s; scene lengths checked"
+    },
+    "originality": {
+      "max": 10,
+      "score": 9,
+      "basis": "provisional self-assessment (pipeline)",
+      "reason": "All visuals, music and SFX generated in-house; original script and research; no third-party footage."
+    },
+    "technical": {
+      "max": 5,
+      "score": 5,
+      "basis": "automated",
+      "reason": "0 QC errors, 0 caption/scene check failures (automated)"
+    }
+  },
+  "blockers": [
+    "REVIEW: medical expert review pending (required before approval/publish)",
+    "REVIEW: human quality review not recorded (subjective categories are provisional)"
+  ],
+  "status": "needs_work",
+  "revision": 0,
+  "max_revisions": 2,
+  "revision_plan": [
+    {
+      "category": "visual",
+      "points_available": 5,
+      "action": "Upgrade hero shots (pore macro, coin strike) to rendered 3D (Blender) or hand-finished illustration; add depth-of-field and lighting passes."
+    },
+    {
+      "category": "storytelling",
+      "points_available": 4,
+      "action": "Sharpen stakes in the hook; test 2 alternative hooks; tighten the payoff line to a single memorable sentence."
+    },
+    {
+      "category": "factual",
+      "points_available": 3,
+      "action": "Obtain subject-matter expert sign-off (dermatologist / historian); add on-screen citations for every number."
+    },
+    {
+      "category": "narration_audio",
+      "points_available": 2,
+      "action": "Record a human narrator (or licensed premium TTS) for the final cut; keep neural TTS for drafts."
+    },
+    {
+      "category": "originality",
+      "points_available": 1,
+      "action": "Add a recurring presenter character or signature visual device unique to the channel."
+    }
+  ],
+  "human_review": null,
+  "note": "Internal QC assessment, not a measure of audience satisfaction. Passing automated checks does not make a video perfect."
+}

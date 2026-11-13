@@ -1,0 +1,59 @@
+{
+  "_note": "DRAFT — nothing is uploaded automatically. Requires human approval (approved=true) via the Control Center.",
+  "approved": false,
+  "title": "What Actually Causes Acne? #shorts",
+  "title_candidates": [
+    {
+      "title": "What Actually Causes Acne?",
+      "scores": {
+        "accuracy_safety": 10,
+        "clarity": 10,
+        "curiosity": 10,
+        "relevance": 10
+      },
+      "total": 40,
+      "clickbait": false
+    },
+    {
+      "title": "How a Pimple Forms, Step by Step",
+      "scores": {
+        "accuracy_safety": 10,
+        "clarity": 10,
+        "curiosity": 8,
+        "relevance": 7
+      },
+      "total": 35,
+      "clickbait": false
+    },
+    {
+      "title": "Acne Isn't Caused by Dirt — Here's What Does It",
+      "scores": {
+        "accuracy_safety": 10,
+        "clarity": 10,
+        "curiosity": 8,
+        "relevance": 7
+      },
+      "total": 35,
+      "clickbait": false
+    }
+  ],
+  "description": "Acne isn't caused by dirty skin. A pimple forms when four things combine inside a pore: excess oil (sebum), clogged follicles, a common skin bacterium called Cutibacterium acnes, and inflammation.\n\nEducational content only — not medical advice. If your acne is painful, scarring or not improving, see a dermatologist.\n\nSources: full source record in the video description/pinned comment.\n\nSources:\n[S1] Acne vulgaris: A review of the pathophysiology, treatment, and recent nanotechnology based advances — Biochemistry and Biophysics Reports (PMC10709101) (2023) https://pmc.ncbi.nlm.nih.gov/articles/PMC10709101/\n[S2] Acne: epidemiology, risk factors, pathogenesis and treatment — Signal Transduction and Targeted Therapy (Nature) (2026) https://www.nature.com/articles/s41392-026-02964-2\n[S3] Cutibacterium acnes as an Opportunistic Pathogen: An Update of Its Virulence-Associated Factors — Microorganisms (PMC7913060) (2021) https://pmc.ncbi.nlm.nih.gov/articles/PMC7913060/\n[S4] Guidelines of care for the management of acne vulgaris — Journal of the American Academy of Dermatology (PubMed 38300170) (2024) https://pubmed.ncbi.nlm.nih.gov/38300170/\n[S5] American Academy of Dermatology issues updated guidelines for the management of acne — American Academy of Dermatology (2024) https://www.aad.org/news/updated-guidelines-acne-management\n[S6] Acne is not caused by poor hygiene or having a dirty face — British Association of Dermatologists — Acne Support (2026) https://www.acnesupport.org.uk/myth/acne-is-caused-by-poor-hygiene-or-having-a-dirty-face-2/\n[S7] From Dysbiosis to Healthy Skin: Major Contributions of Cutibacterium acnes to Skin Homeostasis — Microorganisms (PMC8003110) (2021) https://pmc.ncbi.nlm.nih.gov/articles/PMC8003110/",
+  "tags": [
+    "acne",
+    "pimple",
+    "causes acne",
+    "skin"
+  ],
+  "hashtags": [
+    "#acne",
+    "#skincare",
+    "#dermatology",
+    "#science",
+    "#shorts"
+  ],
+  "category": "Education",
+  "made_for_kids": null,
+  "captions_file": "captions.srt",
+  "thumbnail_file": "thumbnail.jpg",
+  "metrics_note": "No keyword volumes or performance figures are estimated here; use YouTube Analytics after channel connection."
+}

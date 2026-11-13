@@ -1,0 +1,346 @@
+{
+  "id": "hs001",
+  "channel": "health",
+  "brand": "N4V3D HEALTH & SCIENCE",
+  "format": "short",
+  "orientation": "vertical",
+  "title": "What Actually Causes Acne?",
+  "target_duration": 60,
+  "persona": "health",
+  "narrator": {
+    "provider": "kokoro",
+    "voice": "af_heart",
+    "speed": 0.98
+  },
+  "music": {
+    "style": "science_pad",
+    "gain_db": -22
+  },
+  "direction": {
+    "treatment": "A calm, cinematic journey from the skin's surface into a single pore. Each step of acne formation is a new layer added to one consistent cross-section, so the viewer always knows where they are. Stylised scientific illustration, not gore: no close-ups of real lesions.",
+    "style": "Dark navy laboratory backdrop, translucent anatomical layers, soft rim light, gentle particle motion.",
+    "palette": {
+      "bg": "#0B1630",
+      "epidermis": "#F2C4A8",
+      "dermis": "#E9A7A3",
+      "sebum": "#F5C85C",
+      "bacteria": "#B266FF",
+      "immune": "#9FE7FF",
+      "inflammation": "#FF5A5A",
+      "accent": "#5CE1E6"
+    },
+    "typography": "Inter ExtraBold captions, lower third (y≈1280), keyword highlight in accent cyan; labels as thin-line callouts.",
+    "camera": "Slow push-ins (2–4% per scene); one iris transition into the pore; no shaking, no whip pans.",
+    "transitions": "0.4 s cross-dissolves; iris-in for the surface → inside-the-pore move.",
+    "lighting": "Cool key from top-left, warm sebum glow, red inflammation bloom as the only hot colour.",
+    "sfx": "Soft whooshes on transitions, subtle bubble ticks for sebum, low swell for inflammation. No comic SFX.",
+    "safety": "Illustrations are simplified diagrams; ends with a dermatologist note and an educational disclaimer."
+  },
+  "segments": [
+    {
+      "stage": "hook",
+      "scene": "pore_zoom",
+      "claims": [
+        "C1"
+      ],
+      "text": "Every pimple begins in a place like this. A single pore."
+    },
+    {
+      "stage": "question",
+      "scene": "question_card",
+      "claims": [
+        "C2"
+      ],
+      "text": "Acne is incredibly common. So what actually goes wrong in there?",
+      "onscreen": "WHAT ACTUALLY CAUSES ACNE?"
+    },
+    {
+      "stage": "discovery",
+      "scene": "follicle_sebum",
+      "claims": [
+        "C3",
+        "C4"
+      ],
+      "text": "Each pore is a hair follicle with an oil gland. The gland makes sebum, and hormones called androgens can push it to make more."
+    },
+    {
+      "stage": "discovery",
+      "scene": "plug_forms",
+      "claims": [
+        "C5"
+      ],
+      "text": "Skin cells lining the follicle should shed and wash out. In acne, they pile up and stick together with the oil, forming a plug."
+    },
+    {
+      "stage": "surprise",
+      "scene": "bacteria",
+      "claims": [
+        "C6",
+        "C7"
+      ],
+      "text": "Inside that plug, a bacterium called Cutibacterium acnes thrives. The surprise? It's the most common bacterium on healthy skin too."
+    },
+    {
+      "stage": "surprise",
+      "scene": "inflammation",
+      "claims": [
+        "C8"
+      ],
+      "text": "The real trouble is your immune response. Inflammation is what turns a clogged pore into a red, swollen pimple."
+    },
+    {
+      "stage": "payoff",
+      "scene": "four_factors",
+      "claims": [
+        "C9",
+        "C10",
+        "C11"
+      ],
+      "text": "So acne isn't caused by dirt. It's oil, clogging, bacteria and inflammation, together. That's why guidelines strongly recommend benzoyl peroxide and topical retinoids."
+    },
+    {
+      "stage": "final",
+      "scene": "health_end",
+      "claims": [
+        "C12"
+      ],
+      "text": "And if your acne is painful, scarring, or not improving, a dermatologist can help."
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "kind": "peer-reviewed review",
+      "title": "Acne vulgaris: A review of the pathophysiology, treatment, and recent nanotechnology based advances",
+      "publisher": "Biochemistry and Biophysics Reports (PMC10709101)",
+      "year": 2023,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10709101/"
+    },
+    {
+      "id": "S2",
+      "kind": "peer-reviewed review",
+      "title": "Acne: epidemiology, risk factors, pathogenesis and treatment",
+      "publisher": "Signal Transduction and Targeted Therapy (Nature)",
+      "year": 2026,
+      "url": "https://www.nature.com/articles/s41392-026-02964-2"
+    },
+    {
+      "id": "S3",
+      "kind": "peer-reviewed review",
+      "title": "Cutibacterium acnes as an Opportunistic Pathogen: An Update of Its Virulence-Associated Factors",
+      "publisher": "Microorganisms (PMC7913060)",
+      "year": 2021,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7913060/"
+    },
+    {
+      "id": "S4",
+      "kind": "clinical guideline",
+      "title": "Guidelines of care for the management of acne vulgaris",
+      "publisher": "Journal of the American Academy of Dermatology (PubMed 38300170)",
+      "year": 2024,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38300170/"
+    },
+    {
+      "id": "S5",
+      "kind": "professional body",
+      "title": "American Academy of Dermatology issues updated guidelines for the management of acne",
+      "publisher": "American Academy of Dermatology",
+      "year": 2024,
+      "url": "https://www.aad.org/news/updated-guidelines-acne-management"
+    },
+    {
+      "id": "S6",
+      "kind": "professional body",
+      "title": "Acne is not caused by poor hygiene or having a dirty face",
+      "publisher": "British Association of Dermatologists — Acne Support",
+      "year": 2026,
+      "url": "https://www.acnesupport.org.uk/myth/acne-is-caused-by-poor-hygiene-or-having-a-dirty-face-2/"
+    },
+    {
+      "id": "S7",
+      "kind": "peer-reviewed review",
+      "title": "From Dysbiosis to Healthy Skin: Major Contributions of Cutibacterium acnes to Skin Homeostasis",
+      "publisher": "Microorganisms (PMC8003110)",
+      "year": 2021,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8003110/"
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "text": "Acne lesions arise in the pilosebaceous unit (the pore: hair follicle + oil gland).",
+      "sources": [
+        "S2"
+      ],
+      "status": "verified",
+      "checked_by": "research-agent",
+      "medical": true,
+      "evidence": "Acne is a prevalent inflammatory dermatological condition that predominantly affects the pilosebaceous unit"
+    },
+    {
+      "id": "C2",
+      "text": "Acne is very common.",
+      "sources": [
+        "S2"
+      ],
+      "status": "verified",
+      "checked_by": "research-agent",
+      "medical": true,
+      "evidence": "Acne is a prevalent inflammatory dermatological condition"
+    },
+    {
+      "id": "C3",
+      "text": "Pores are follicle openings connected to sebaceous (oil) glands that produce sebum.",
+      "sources": [
+        "S2"
+      ],
+      "status": "verified",
+      "checked_by": "research-agent",
+      "medical": true,
+      "evidence": "The pilosebaceous unit is a metabolically active and immunologically responsive niche composed of sebaceous glands, follicular keratinocytes, lipids, proteins..."
+    },
+    {
+      "id": "C4",
+      "text": "Androgens increase sebum production.",
+      "sources": [
+        "S1",
+        "S2"
+      ],
+      "status": "verified",
+      "checked_by": "research-agent",
+      "medical": true,
+      "evidence": "androgen hormones, specifically testosterone and Insulin Growth hormone (IGH-1), increase sebum synthesis and secretion"
+    },
+    {
+      "id": "C5",
+      "text": "In acne, follicle-lining cells are not shed normally and accumulate with lipids, blocking the follicle.",
+      "sources": [
+        "S1",
+        "S2"
+      ],
+      "status": "verified",
+      "checked_by": "research-agent",
+      "medical": true,
+      "evidence": "in acne patients, keratinocytes hyper proliferate and are not shed into the lumen, which leads to the accumulation of irregular desquamated corneocytes in the pilosebaceous follicles coupled with lipids"
+    },
+    {
+      "id": "C6",
+      "text": "C. acnes thrives in oily, low-oxygen follicles.",
+      "sources": [
+        "S1",
+        "S3"
+      ],
+      "status": "verified",
+      "checked_by": "research-agent",
+      "medical": true,
+      "evidence": "anaerobic, lipophilic, gram-positive ... prefers to colonise in sebaceous follicles because they produce large amounts of sebum and provide excellent anaerobic habitat"
+    },
+    {
+      "id": "C7",
+      "text": "C. acnes is the most abundant bacterium on (healthy) skin.",
+      "sources": [
+        "S3",
+        "S7"
+      ],
+      "status": "verified",
+      "checked_by": "research-agent",
+      "medical": true,
+      "evidence": "C. acnes is, by far, the most abundant bacterium in the skin microbiota, and its load does not seem to differ between healthy skin and skin affected by acne."
+    },
+    {
+      "id": "C8",
+      "text": "The immune/inflammatory response produces red, swollen (inflammatory) lesions.",
+      "sources": [
+        "S1",
+        "S2"
+      ],
+      "status": "verified",
+      "checked_by": "research-agent",
+      "medical": true,
+      "evidence": "when the immune system detects P. acnes, the inflammatory process begins ... These mechanistic processes will produce inflammatory lesions such as ... pustules, nodules, cysts and papules"
+    },
+    {
+      "id": "C9",
+      "text": "Acne is not caused by poor hygiene or a dirty face.",
+      "sources": [
+        "S6"
+      ],
+      "status": "verified",
+      "checked_by": "research-agent",
+      "medical": true,
+      "evidence": "Acne is not caused by poor hygiene or having a dirty face (British Association of Dermatologists, Acne Support)"
+    },
+    {
+      "id": "C10",
+      "text": "Acne involves four interacting factors: excess sebum, follicular hyperkeratinization, C. acnes, and inflammation.",
+      "sources": [
+        "S1",
+        "S2"
+      ],
+      "status": "verified",
+      "checked_by": "research-agent",
+      "medical": true,
+      "evidence": "Acne's pathophysiology involves four important factors: excessive sebum production, hyperkeratinization of pilosebaceous follicles, hyperproliferation of propionibacterium acnes (P. acnes), and inflammation."
+    },
+    {
+      "id": "C11",
+      "text": "The AAD 2024 guideline strongly recommends benzoyl peroxide and topical retinoids.",
+      "sources": [
+        "S4",
+        "S5"
+      ],
+      "status": "verified",
+      "checked_by": "research-agent",
+      "medical": true,
+      "evidence": "For patients with acne, the AAD recommends benzoyl peroxide — Strong; ... recommends topical retinoids — Strong (moderate certainty). Benzoyl peroxide to reduce the amount of acne-causing bacteria; topical retinoids to help unclog pores and reduce inflammation."
+    },
+    {
+      "id": "C12",
+      "text": "Painful, scarring or persistent acne warrants seeing a dermatologist (general safety guidance).",
+      "sources": [
+        "S4"
+      ],
+      "status": "verified",
+      "checked_by": "research-agent",
+      "medical": true,
+      "evidence": "Guideline-based management of acne vulgaris is delivered by clinicians; general referral advice, not an individualized recommendation."
+    }
+  ],
+  "review": {
+    "author": "writer-agent",
+    "fact_checker": "research-agent",
+    "expert_review": {
+      "required": true,
+      "status": "pending",
+      "reviewer": null,
+      "date": null,
+      "notes": "Board-certified dermatologist must review script, visuals and claims C1–C12 before approval."
+    }
+  },
+  "seo": {
+    "keywords": [
+      "acne",
+      "pimple",
+      "causes acne",
+      "skin"
+    ],
+    "titles": [
+      "What Actually Causes Acne?",
+      "How a Pimple Forms, Step by Step",
+      "Acne Isn't Caused by Dirt — Here's What Does It"
+    ],
+    "description": "Acne isn't caused by dirty skin. A pimple forms when four things combine inside a pore: excess oil (sebum), clogged follicles, a common skin bacterium called Cutibacterium acnes, and inflammation.\n\nEducational content only — not medical advice. If your acne is painful, scarring or not improving, see a dermatologist.\n\nSources: full source record in the video description/pinned comment.",
+    "hashtags": [
+      "#acne",
+      "#skincare",
+      "#dermatology",
+      "#science",
+      "#shorts"
+    ],
+    "thumbnail": {
+      "scene": "bacteria",
+      "t": 0.6,
+      "text": "WHAT CAUSES ACNE?"
+    }
+  }
+}

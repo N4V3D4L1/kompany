@@ -1,0 +1,102 @@
+[
+  {
+    "scene": 1,
+    "stage": "hook",
+    "start": 0.0,
+    "end": 3.86,
+    "voiceover": "Every pimple begins in a place like this. A single pore.",
+    "prompt": "Dark navy laboratory backdrop, translucent anatomical layers, soft rim light, gentle particle motion. Scene: pore zoom. Show: Every pimple begins in a place like this. A single pore. Palette: #0B1630, #F2C4A8, #E9A7A3, #F5C85C, #B266FF, #9FE7FF, #FF5A5A, #5CE1E6. Camera: Slow push-ins (2\u20134% per scene); one iris transition into the pore; no shaking, no whip pans. Stylised scientific illustration, no real lesions. No text other than the on-screen labels listed.",
+    "reference_frame": "../storyboard/scene_01_pore_zoom.jpg",
+    "claims": [
+      "C1"
+    ]
+  },
+  {
+    "scene": 2,
+    "stage": "question",
+    "start": 3.86,
+    "end": 8.12,
+    "voiceover": "Acne is incredibly common. So what actually goes wrong in there?",
+    "prompt": "Dark navy laboratory backdrop, translucent anatomical layers, soft rim light, gentle particle motion. Scene: question card. Show: Acne is incredibly common. So what actually goes wrong in there? Palette: #0B1630, #F2C4A8, #E9A7A3, #F5C85C, #B266FF, #9FE7FF, #FF5A5A, #5CE1E6. Camera: Slow push-ins (2\u20134% per scene); one iris transition into the pore; no shaking, no whip pans. Stylised scientific illustration, no real lesions. No text other than the on-screen labels listed.",
+    "reference_frame": "../storyboard/scene_02_question_card.jpg",
+    "claims": [
+      "C2"
+    ]
+  },
+  {
+    "scene": 3,
+    "stage": "discovery",
+    "start": 8.12,
+    "end": 16.18,
+    "voiceover": "Each pore is a hair follicle with an oil gland. The gland makes sebum, and hormones called androgens can push it to make more.",
+    "prompt": "Dark navy laboratory backdrop, translucent anatomical layers, soft rim light, gentle particle motion. Scene: follicle sebum. Show: Each pore is a hair follicle with an oil gland. The gland makes sebum, and hormones called androgens can push it to make more. Palette: #0B1630, #F2C4A8, #E9A7A3, #F5C85C, #B266FF, #9FE7FF, #FF5A5A, #5CE1E6. Camera: Slow push-ins (2\u20134% per scene); one iris transition into the pore; no shaking, no whip pans. Stylised scientific illustration, no real lesions. No text other than the on-screen labels listed.",
+    "reference_frame": "../storyboard/scene_03_follicle_sebum.jpg",
+    "claims": [
+      "C3",
+      "C4"
+    ]
+  },
+  {
+    "scene": 4,
+    "stage": "discovery",
+    "start": 16.18,
+    "end": 24.33,
+    "voiceover": "Skin cells lining the follicle should shed and wash out. In acne, they pile up and stick together with the oil, forming a plug.",
+    "prompt": "Dark navy laboratory backdrop, translucent anatomical layers, soft rim light, gentle particle motion. Scene: plug forms. Show: Skin cells lining the follicle should shed and wash out. In acne, they pile up and stick together with the oil, forming a plug. Palette: #0B1630, #F2C4A8, #E9A7A3, #F5C85C, #B266FF, #9FE7FF, #FF5A5A, #5CE1E6. Camera: Slow push-ins (2\u20134% per scene); one iris transition into the pore; no shaking, no whip pans. Stylised scientific illustration, no real lesions. No text other than the on-screen labels listed.",
+    "reference_frame": "../storyboard/scene_04_plug_forms.jpg",
+    "claims": [
+      "C5"
+    ]
+  },
+  {
+    "scene": 5,
+    "stage": "surprise",
+    "start": 24.33,
+    "end": 33.52,
+    "voiceover": "Inside that plug, a bacterium called Cutibacterium acnes thrives. The surprise? It's the most common bacterium on healthy skin too.",
+    "prompt": "Dark navy laboratory backdrop, translucent anatomical layers, soft rim light, gentle particle motion. Scene: bacteria. Show: Inside that plug, a bacterium called Cutibacterium acnes thrives. The surprise? It's the most common bacterium on healthy skin too. Palette: #0B1630, #F2C4A8, #E9A7A3, #F5C85C, #B266FF, #9FE7FF, #FF5A5A, #5CE1E6. Camera: Slow push-ins (2\u20134% per scene); one iris transition into the pore; no shaking, no whip pans. Stylised scientific illustration, no real lesions. No text other than the on-screen labels listed.",
+    "reference_frame": "../storyboard/scene_05_bacteria.jpg",
+    "claims": [
+      "C6",
+      "C7"
+    ]
+  },
+  {
+    "scene": 6,
+    "stage": "surprise",
+    "start": 33.52,
+    "end": 41.13,
+    "voiceover": "The real trouble is your immune response. Inflammation is what turns a clogged pore into a red, swollen pimple.",
+    "prompt": "Dark navy laboratory backdrop, translucent anatomical layers, soft rim light, gentle particle motion. Scene: inflammation. Show: The real trouble is your immune response. Inflammation is what turns a clogged pore into a red, swollen pimple. Palette: #0B1630, #F2C4A8, #E9A7A3, #F5C85C, #B266FF, #9FE7FF, #FF5A5A, #5CE1E6. Camera: Slow push-ins (2\u20134% per scene); one iris transition into the pore; no shaking, no whip pans. Stylised scientific illustration, no real lesions. No text other than the on-screen labels listed.",
+    "reference_frame": "../storyboard/scene_06_inflammation.jpg",
+    "claims": [
+      "C8"
+    ]
+  },
+  {
+    "scene": 7,
+    "stage": "payoff",
+    "start": 41.13,
+    "end": 53.23,
+    "voiceover": "So acne isn't caused by dirt. It's oil, clogging, bacteria and inflammation, together. That's why guidelines strongly recommend benzoyl peroxide and topical retinoids.",
+    "prompt": "Dark navy laboratory backdrop, translucent anatomical layers, soft rim light, gentle particle motion. Scene: four factors. Show: So acne isn't caused by dirt. It's oil, clogging, bacteria and inflammation, together. That's why guidelines strongly recommend benzoyl peroxide and topical retinoids. Palette: #0B1630, #F2C4A8, #E9A7A3, #F5C85C, #B266FF, #9FE7FF, #FF5A5A, #5CE1E6. Camera: Slow push-ins (2\u20134% per scene); one iris transition into the pore; no shaking, no whip pans. Stylised scientific illustration, no real lesions. No text other than the on-screen labels listed.",
+    "reference_frame": "../storyboard/scene_07_four_factors.jpg",
+    "claims": [
+      "C9",
+      "C10",
+      "C11"
+    ]
+  },
+  {
+    "scene": 8,
+    "stage": "final",
+    "start": 53.23,
+    "end": 59.65,
+    "voiceover": "And if your acne is painful, scarring, or not improving, a dermatologist can help.",
+    "prompt": "Dark navy laboratory backdrop, translucent anatomical layers, soft rim light, gentle particle motion. Scene: health end. Show: And if your acne is painful, scarring, or not improving, a dermatologist can help. Palette: #0B1630, #F2C4A8, #E9A7A3, #F5C85C, #B266FF, #9FE7FF, #FF5A5A, #5CE1E6. Camera: Slow push-ins (2\u20134% per scene); one iris transition into the pore; no shaking, no whip pans. Stylised scientific illustration, no real lesions. No text other than the on-screen labels listed.",
+    "reference_frame": "../storyboard/scene_08_health_end.jpg",
+    "claims": [
+      "C12"
+    ]
+  }
+]

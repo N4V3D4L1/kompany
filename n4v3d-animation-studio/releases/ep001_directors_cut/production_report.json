@@ -1,0 +1,289 @@
+{
+  "episode": "ep001v2",
+  "title": "The Snooze-O-Matic Director's Cut",
+  "output": "output/ep001v2_the_snooze_o_matic_director_s_cut/N4V3D_ep001v2_the_snooze_o_matic_director_s_cut_1080x1920.mp4",
+  "duration": 53.280132552083344,
+  "fit": {
+    "target": 54.0,
+    "natural": 47.938,
+    "final": 53.28,
+    "gap_extra": 0.189,
+    "tail_extra": 0.72
+  },
+  "frames": 1598,
+  "mix": {
+    "peak_pre_limiter": 1.11,
+    "samples": 2557447
+  },
+  "loudness_pre_norm": {
+    "input_i": "-14.22",
+    "input_tp": "0.16",
+    "input_lra": "11.40",
+    "input_thresh": "-26.09",
+    "output_i": "-14.99",
+    "output_tp": "-1.50",
+    "output_lra": "6.90",
+    "output_thresh": "-26.12",
+    "normalization_type": "dynamic",
+    "target_offset": "0.99"
+  },
+  "lines": [
+    {
+      "id": "L01",
+      "who": "nuggo",
+      "t0": 3.05,
+      "dur": 1.4,
+      "voice": "kokoro-neural-tts",
+      "text": "Brickley! I have solved mornings!"
+    },
+    {
+      "id": "L02",
+      "who": "brickley",
+      "t0": 4.86,
+      "dur": 2.08,
+      "voice": "kokoro-neural-tts",
+      "text": "It's three in the afternoon."
+    },
+    {
+      "id": "L03",
+      "who": "nuggo",
+      "t0": 7.35,
+      "dur": 1.99,
+      "voice": "kokoro-neural-tts",
+      "text": "Exactly! I slept right through the problem."
+    },
+    {
+      "id": "L04",
+      "who": "nuggo",
+      "t0": 10.67,
+      "dur": 0.61,
+      "voice": "kokoro-neural-tts",
+      "text": "Behold!"
+    },
+    {
+      "id": "L05",
+      "who": "nuggo",
+      "t0": 12.49,
+      "dur": 0.95,
+      "voice": "kokoro-neural-tts",
+      "text": "The Snooze-O-Matic!"
+    },
+    {
+      "id": "L06",
+      "who": "nuggo",
+      "t0": 13.85,
+      "dur": 2.43,
+      "voice": "kokoro-neural-tts",
+      "text": "It hits snooze for you, so you never have to wake up!"
+    },
+    {
+      "id": "L07",
+      "who": "brickley",
+      "t0": 16.69,
+      "dur": 2.26,
+      "voice": "kokoro-neural-tts",
+      "text": "So it's a box that makes you late."
+    },
+    {
+      "id": "L08",
+      "who": "nuggo",
+      "t0": 19.36,
+      "dur": 0.86,
+      "voice": "kokoro-neural-tts",
+      "text": "Efficiently late!"
+    },
+    {
+      "id": "L09",
+      "who": "nuggo",
+      "t0": 21.55,
+      "dur": 0.67,
+      "voice": "kokoro-neural-tts",
+      "text": "Watch this!"
+    },
+    {
+      "id": "L10",
+      "who": "nuggo",
+      "t0": 25.03,
+      "dur": 0.7,
+      "voice": "kokoro-neural-tts",
+      "text": "Ha! It works!"
+    },
+    {
+      "id": "L11",
+      "who": "nuggo",
+      "t0": 27.29,
+      "dur": 1.51,
+      "voice": "kokoro-neural-tts",
+      "text": "Phase one... a total success."
+    },
+    {
+      "id": "L12",
+      "who": "brickley",
+      "t0": 30.54,
+      "dur": 1.63,
+      "voice": "kokoro-neural-tts",
+      "text": "Does it have an off switch?"
+    },
+    {
+      "id": "L13",
+      "who": "nuggo",
+      "t0": 32.57,
+      "dur": 1.28,
+      "voice": "kokoro-neural-tts",
+      "text": "Off switches are for quitters!"
+    },
+    {
+      "id": "L14",
+      "who": "nuggo",
+      "t0": 37.68,
+      "dur": 1.14,
+      "voice": "kokoro-neural-tts",
+      "text": "See? Now it's well rested."
+    },
+    {
+      "id": "L15",
+      "who": "brickley",
+      "t0": 39.52,
+      "dur": 2.82,
+      "voice": "kokoro-neural-tts",
+      "text": "Subscribe, before he invents breakfast."
+    },
+    {
+      "id": "L16",
+      "who": "brickley",
+      "t0": 45.91,
+      "dur": 1.1,
+      "voice": "kokoro-neural-tts",
+      "text": "Phase one."
+    }
+  ],
+  "sfx": [
+    {
+      "t": 0.1,
+      "name": "pop"
+    },
+    {
+      "t": 0.95,
+      "name": "slurp"
+    },
+    {
+      "t": 2.5,
+      "name": "whoosh"
+    },
+    {
+      "t": 2.9,
+      "name": "skid"
+    },
+    {
+      "t": 11.69,
+      "name": "whoosh"
+    },
+    {
+      "t": 11.96,
+      "name": "thud"
+    },
+    {
+      "t": 13.55,
+      "name": "ding"
+    },
+    {
+      "t": 22.73,
+      "name": "click"
+    },
+    {
+      "t": 22.98,
+      "name": "alarm"
+    },
+    {
+      "t": 24.39,
+      "name": "bonk"
+    },
+    {
+      "t": 24.39,
+      "name": "whoosh"
+    },
+    {
+      "t": 26.32,
+      "name": "boing"
+    },
+    {
+      "t": 32.37,
+      "name": "whoosh"
+    },
+    {
+      "t": 34.58,
+      "name": "bonk"
+    },
+    {
+      "t": 36.9,
+      "name": "click"
+    },
+    {
+      "t": 37.48,
+      "name": "snore"
+    },
+    {
+      "t": 39.32,
+      "name": "snore"
+    },
+    {
+      "t": 43.11,
+      "name": "slurp"
+    },
+    {
+      "t": 44.22,
+      "name": "bonk"
+    },
+    {
+      "t": 44.22,
+      "name": "whoosh"
+    },
+    {
+      "t": 44.91,
+      "name": "thud"
+    },
+    {
+      "t": 48.01,
+      "name": "sting"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "s1",
+      "name": "Cold open \u2014 'I solved mornings'",
+      "t0": 0.0,
+      "t1": 10.67,
+      "background": "kitchen_day"
+    },
+    {
+      "id": "s2",
+      "name": "The reveal",
+      "t0": 10.67,
+      "t1": 21.55,
+      "background": "kitchen_day"
+    },
+    {
+      "id": "s3",
+      "name": "The demo",
+      "t0": 21.55,
+      "t1": 30.09,
+      "background": "kitchen_day"
+    },
+    {
+      "id": "s4",
+      "name": "Chaos",
+      "t0": 30.09,
+      "t1": 36.33,
+      "background": "kitchen_day"
+    },
+    {
+      "id": "s5",
+      "name": "Lights out",
+      "t0": 36.33,
+      "t1": 53.28,
+      "background": "kitchen_day"
+    }
+  ],
+  "render_seconds": 162.7,
+  "warnings": []
+}

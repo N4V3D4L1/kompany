@@ -1,0 +1,86 @@
+[
+  {
+    "scene": 1,
+    "stage": "hook",
+    "start": 0.0,
+    "end": 6.15,
+    "voiceover": "Nearly 4,000 years ago, Mesopotamians lent silver at 20 percent interest.",
+    "prompt": "Painterly flat illustration with atmospheric gradients, warm dusk light, layered parallax silhouettes. Scene: mesopotamia city. Show: Nearly 4,000 years ago, Mesopotamians lent silver at 20 percent interest. Palette: #1B1033, #E9854A, #C9A26B, #9C6A44, #B98A5E, #D9DDE3, #E3C15C, #FFD27A. Camera: Slow parallax push-ins on landscapes; locked-off for diagrams; a single coin-strike punch. Label as artistic reconstruction. No text other than the on-screen labels listed.",
+    "reference_frame": "../storyboard/scene_01_mesopotamia_city.jpg",
+    "claims": [
+      "H1"
+    ]
+  },
+  {
+    "scene": 2,
+    "stage": "question",
+    "start": 6.15,
+    "end": 11.59,
+    "voiceover": "Yet the first coins wouldn't appear for over a thousand years. So how did money begin?",
+    "prompt": "Painterly flat illustration with atmospheric gradients, warm dusk light, layered parallax silhouettes. Scene: no coins timeline. Show: Yet the first coins wouldn't appear for over a thousand years. So how did money begin? Palette: #1B1033, #E9854A, #C9A26B, #9C6A44, #B98A5E, #D9DDE3, #E3C15C, #FFD27A. Camera: Slow parallax push-ins on landscapes; locked-off for diagrams; a single coin-strike punch. Label as artistic reconstruction. No text other than the on-screen labels listed.",
+    "reference_frame": "../storyboard/scene_02_no_coins_timeline.jpg",
+    "claims": [
+      "H2"
+    ]
+  },
+  {
+    "scene": 3,
+    "stage": "discovery",
+    "start": 11.59,
+    "end": 20.66,
+    "voiceover": "The classic story says people bartered, a goat for some grain. But no one has ever documented a society that ran on barter alone.",
+    "prompt": "Painterly flat illustration with atmospheric gradients, warm dusk light, layered parallax silhouettes. Scene: barter myth. Show: The classic story says people bartered, a goat for some grain. But no one has ever documented a society that ran on barter alone. Palette: #1B1033, #E9854A, #C9A26B, #9C6A44, #B98A5E, #D9DDE3, #E3C15C, #FFD27A. Camera: Slow parallax push-ins on landscapes; locked-off for diagrams; a single coin-strike punch. Label as artistic reconstruction. No text other than the on-screen labels listed.",
+    "reference_frame": "../storyboard/scene_03_barter_myth.jpg",
+    "claims": [
+      "H3"
+    ]
+  },
+  {
+    "scene": 4,
+    "stage": "discovery",
+    "start": 20.66,
+    "end": 30.99,
+    "voiceover": "Instead, Mesopotamian scribes recorded debts on clay tablets, measured in silver and barley. A shekel was a weight of silver, about eight grams.",
+    "prompt": "Painterly flat illustration with atmospheric gradients, warm dusk light, layered parallax silhouettes. Scene: clay ledger. Show: Instead, Mesopotamian scribes recorded debts on clay tablets, measured in silver and barley. A shekel was a weight of silver, about eight grams. Palette: #1B1033, #E9854A, #C9A26B, #9C6A44, #B98A5E, #D9DDE3, #E3C15C, #FFD27A. Camera: Slow parallax push-ins on landscapes; locked-off for diagrams; a single coin-strike punch. Label as artistic reconstruction. No text other than the on-screen labels listed.",
+    "reference_frame": "../storyboard/scene_04_clay_ledger.jpg",
+    "claims": [
+      "H4"
+    ]
+  },
+  {
+    "scene": 5,
+    "stage": "surprise",
+    "start": 30.99,
+    "end": 37.59,
+    "voiceover": "So money may have started as a record of who owed what. Historians still debate the details.",
+    "prompt": "Painterly flat illustration with atmospheric gradients, warm dusk light, layered parallax silhouettes. Scene: credit web. Show: So money may have started as a record of who owed what. Historians still debate the details. Palette: #1B1033, #E9854A, #C9A26B, #9C6A44, #B98A5E, #D9DDE3, #E3C15C, #FFD27A. Camera: Slow parallax push-ins on landscapes; locked-off for diagrams; a single coin-strike punch. Label as artistic reconstruction. No text other than the on-screen labels listed.",
+    "reference_frame": "../storyboard/scene_05_credit_web.jpg",
+    "claims": [
+      "H5"
+    ]
+  },
+  {
+    "scene": 6,
+    "stage": "payoff",
+    "start": 37.59,
+    "end": 48.14,
+    "voiceover": "Then, in the late six hundreds BCE, in Lydia, in modern Turkey, people stamped lumps of electrum, a natural gold and silver alloy. The first coins.",
+    "prompt": "Painterly flat illustration with atmospheric gradients, warm dusk light, layered parallax silhouettes. Scene: lydia coin. Show: Then, in the late six hundreds BCE, in Lydia, in modern Turkey, people stamped lumps of electrum, a natural gold and silver alloy. The first coins. Palette: #1B1033, #E9854A, #C9A26B, #9C6A44, #B98A5E, #D9DDE3, #E3C15C, #FFD27A. Camera: Slow parallax push-ins on landscapes; locked-off for diagrams; a single coin-strike punch. Label as artistic reconstruction. No text other than the on-screen labels listed.",
+    "reference_frame": "../storyboard/scene_06_lydia_coin.jpg",
+    "claims": [
+      "H6"
+    ]
+  },
+  {
+    "scene": 7,
+    "stage": "final",
+    "start": 48.14,
+    "end": 57.38,
+    "voiceover": "Today, the Bank of England estimates most money is bank deposits. Numbers in a ledger, a lot like a clay tablet.",
+    "prompt": "Painterly flat illustration with atmospheric gradients, warm dusk light, layered parallax silhouettes. Scene: modern ledger. Show: Today, the Bank of England estimates most money is bank deposits. Numbers in a ledger, a lot like a clay tablet. Palette: #1B1033, #E9854A, #C9A26B, #9C6A44, #B98A5E, #D9DDE3, #E3C15C, #FFD27A. Camera: Slow parallax push-ins on landscapes; locked-off for diagrams; a single coin-strike punch. Label as artistic reconstruction. No text other than the on-screen labels listed.",
+    "reference_frame": "../storyboard/scene_07_modern_ledger.jpg",
+    "claims": [
+      "H7"
+    ]
+  }
+]

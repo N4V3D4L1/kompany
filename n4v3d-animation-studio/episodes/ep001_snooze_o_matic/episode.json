@@ -1,0 +1,164 @@
+{
+  "id": "ep001",
+  "title": "The Snooze-O-Matic",
+  "logline": "Nuggo invents a box that hits snooze for you. It hits everything else, too.",
+  "target_duration": 45.0,
+  "thumbnail_time": 24.6,
+  "background": "kitchen_day",
+  "music": {"bpm": 118, "gain_db": -16.0, "duck_db": -9.0},
+
+  "cast": {
+    "nuggo":    {"provider": "flite", "voice": "slt", "pitch": 1.28, "tempo": 1.12},
+    "brickley": {"provider": "flite", "voice": "rms", "pitch": 0.80, "tempo": 0.90}
+  },
+
+  "entities": {
+    "nuggo":    {"asset": "nuggo",    "pos": [-300, 1640], "scale": 1.2, "z": 2, "emotion": "excited", "pose": "rest"},
+    "brickley": {"asset": "brickley", "pos": [900, 1640], "scale": 1.15, "z": 1, "flip": true,
+                 "emotion": "deadpan", "pose": "hold", "hold": "mug"},
+    "box":      {"asset": "box",   "pos": [585, -420], "scale": 1.1, "z": 3,
+                 "state": {"punch": 0.08, "angle": -90, "mood": "happy", "active": false, "press": 0.0}},
+    "clock":    {"asset": "clock", "pos": [478, -750], "scale": 0.95, "z": 4,
+                 "state": {"ringing": false, "no_shadow": true}}
+  },
+
+  "scenes": [
+    {
+      "id": "s1", "name": "Cold open — 'I solved mornings'",
+      "beats": [
+        {"overlay": "title", "text": "THE SNOOZE-O-MATIC", "sub": "EPISODE 1", "kicker": "N4V3D ANIMATION STUDIO PRESENTS", "y": 700, "dur": 2.7},
+        {"sfx": "pop", "delay": 0.1, "gain": 0.6},
+        {"do": "pose", "who": "brickley", "value": "sip", "dur": 0.45, "delay": 0.5},
+        {"sfx": "slurp", "delay": 0.95, "gain": 0.5},
+        {"do": "pose", "who": "brickley", "value": "hold", "dur": 0.4, "delay": 1.9},
+        {"pause": 2.5},
+        {"do": "move", "who": "nuggo", "to": [235, 1640], "dur": 0.42, "ease": "out", "sfx": "whoosh"},
+        {"overlay": "speedlines", "at": [130, 1420], "dir": 1, "dur": 0.55},
+        {"do": "squash", "who": "nuggo", "amount": 0.28, "dur": 0.55, "delay": 0.4, "sfx": "skid"},
+        {"pause": 0.55},
+        {"line": "nuggo", "text": "Brickley! I have solved mornings!", "emotion": "excited", "pose": "up"},
+        {"line": "brickley", "text": "It's three in the afternoon.", "look": [0.1, -1.0]},
+        {"do": "look", "who": "brickley", "at": [0.7, 0.2]},
+        {"line": "nuggo", "text": "Exactly! I slept right through the problem.", "emotion": "proud", "pose": "hips"}
+      ],
+      "tail": 0.2
+    },
+    {
+      "id": "s2", "name": "The reveal",
+      "beats": [
+        {"line": "nuggo", "text": "Behold!", "emotion": "excited", "pose": "up"},
+        {"do": "move", "who": "box",   "to": [585, 1640], "dur": 0.75, "ease": "out_bounce", "sfx": "whoosh"},
+        {"do": "move", "who": "clock", "to": [478, 1310], "dur": 0.75, "ease": "out_bounce"},
+        {"sfx": "thud", "delay": 0.27, "gain": 1.0},
+        {"do": "shake", "who": "camera", "amp": 16, "dur": 0.45, "delay": 0.27},
+        {"do": "hop", "who": ["nuggo", "brickley"], "height": 45, "dur": 0.3, "delay": 0.27},
+        {"pause": 0.8},
+        {"line": "nuggo", "text": "The Snooze-O-Matic!", "tts": "The snooze oh matic!", "pose": "present"},
+        {"sfx": "ding", "delay": -0.3, "gain": 0.5},
+        {"line": "nuggo", "text": "It hits snooze for you, so you never have to wake up!", "emotion": "proud", "pose": "point"},
+        {"line": "brickley", "text": "So it's a box that makes you late.", "look": [0.8, 0.3]},
+        {"line": "nuggo", "text": "Efficiently late!", "emotion": "smug", "pose": "hips"}
+      ],
+      "tail": 0.2
+    },
+    {
+      "id": "s3", "name": "The demo",
+      "beats": [
+        {"line": "nuggo", "text": "Watch this!", "emotion": "excited", "pose": "press"},
+        {"do": "press", "who": "box", "dur": 0.3, "sfx": "click", "sfx_delay": 0.1},
+        {"do": "set", "who": "box", "prop": "active", "value": true, "delay": 0.15},
+        {"do": "ring", "who": "clock", "dur": 1.4, "delay": 0.35},
+        {"sfx": "alarm", "delay": 0.35, "gain": 0.55},
+        {"overlay": "burst", "text": "RING!", "at": [470, 1000], "size": 0.6, "rot": 8, "color": "#B9F3EC", "dur": 1.2, "delay": 0.4},
+        {"do": "look", "who": "brickley", "at": [0.9, 0.0], "delay": 0.4},
+        {"do": "pose", "who": "nuggo", "value": "up", "delay": 0.5},
+        {"pause": 1.65},
+        {"do": "punch", "who": "box", "target": "clock", "overshoot": 0.04, "dur": 0.5},
+        {"sfx": "bonk", "delay": 0.11, "gain": 0.9},
+        {"overlay": "burst", "text": "BONK!", "at": [470, 1060], "size": 0.75, "dur": 0.7, "delay": 0.11},
+        {"do": "move", "who": "clock", "to": [-260, 520], "dur": 0.7, "ease": "out", "delay": 0.11, "sfx": "whoosh"},
+        {"do": "spin", "who": "clock", "turns": -2, "dur": 0.7, "delay": 0.11},
+        {"do": "shake", "who": "camera", "amp": 10, "dur": 0.3, "delay": 0.11},
+        {"pause": 0.75},
+        {"line": "nuggo", "text": "Ha! It works!", "emotion": "excited"},
+        {"do": "punch", "who": "box", "target": "nuggo", "dur": 0.6, "delay": 0.05},
+        {"sfx": "boing", "delay": 0.18, "gain": 0.9},
+        {"overlay": "burst", "text": "BOING!", "at": [250, 1010], "size": 0.8, "rot": -10, "dur": 0.85, "delay": 0.18},
+        {"do": "emotion", "who": "nuggo", "value": "dizzy", "delay": 0.18},
+        {"do": "move", "who": "nuggo", "by": [-55, 0], "dur": 0.3, "ease": "out", "delay": 0.18},
+        {"do": "tilt", "who": "nuggo", "angle": -22, "dur": 0.3, "delay": 0.18},
+        {"do": "pose", "who": "nuggo", "value": "flat", "delay": 0.18},
+        {"do": "zoom", "who": "camera", "scale": 1.18, "center": [340, 1320], "dur": 0.25, "delay": 0.18},
+        {"do": "shake", "who": "camera", "amp": 18, "dur": 0.5, "delay": 0.18},
+        {"pause": 1.15},
+        {"do": "tilt", "who": "nuggo", "angle": -6, "dur": 0.4},
+        {"line": "nuggo", "text": "Phase one... a total success.", "pose": "shrug"},
+        {"do": "reset", "who": "camera", "dur": 0.4}
+      ],
+      "tail": 0.15
+    },
+    {
+      "id": "s4", "name": "Chaos",
+      "beats": [
+        {"do": "set", "who": "box", "prop": "mood", "value": "angry"},
+        {"do": "shake", "who": "box", "amp": 9, "dur": 0.5},
+        {"do": "pose", "who": "brickley", "value": "sip", "dur": 0.4, "delay": 0.1},
+        {"pause": 0.45},
+        {"line": "brickley", "text": "Does it have an off switch?", "look": [0.8, 0.3]},
+        {"do": "punch", "who": "box", "target": "brickley", "aim_offset": [-120, 30], "dur": 0.55, "delay": -0.25},
+        {"sfx": "whoosh", "delay": -0.2, "gain": 0.8},
+        {"do": "tilt", "who": "brickley", "angle": 15, "dur": 0.12, "ease": "out", "delay": -0.25},
+        {"do": "tilt", "who": "brickley", "angle": 0, "dur": 0.35, "delay": 0.25},
+        {"do": "emotion", "who": "nuggo", "value": "proud"},
+        {"do": "tilt", "who": "nuggo", "angle": 0, "dur": 0.3},
+        {"line": "nuggo", "text": "Off switches are for quitters!", "pose": "up"},
+        {"do": "punch", "who": "box", "target": "nuggo", "dur": 0.55, "delay": -0.15},
+        {"sfx": "bonk", "delay": -0.03, "gain": 1.0},
+        {"overlay": "burst", "text": "BONK!", "at": [260, 1000], "size": 0.85, "rot": 6, "dur": 0.8, "delay": -0.03},
+        {"do": "emotion", "who": "nuggo", "value": "dizzy", "delay": -0.03},
+        {"do": "hop", "who": "nuggo", "height": 90, "dur": 0.45, "delay": -0.03},
+        {"do": "spin", "who": "nuggo", "turns": -1, "dur": 0.45, "delay": -0.03},
+        {"do": "pose", "who": "nuggo", "value": "flat", "delay": -0.03},
+        {"do": "shake", "who": "camera", "amp": 20, "dur": 0.5, "delay": -0.03},
+        {"pause": 0.9},
+        {"do": "tilt", "who": "nuggo", "angle": -14, "dur": 0.3}
+      ],
+      "tail": 0.1
+    },
+    {
+      "id": "s5", "name": "Lights out",
+      "beats": [
+        {"do": "set", "who": "box", "prop": "mood", "value": "sleepy"},
+        {"pause": 0.35},
+        {"do": "punch", "who": "box", "target": "self_button", "dur": 0.8},
+        {"do": "press", "who": "box", "dur": 0.3, "delay": 0.17, "sfx": "click", "sfx_delay": 0.05},
+        {"do": "set", "who": "box", "prop": "active", "value": false, "delay": 0.3},
+        {"do": "set", "who": "box", "prop": "mood", "value": "asleep", "delay": 0.5},
+        {"overlay": "zzz", "at": [600, 1330], "dur": 9.0, "delay": 0.6},
+        {"sfx": "snore", "delay": 0.8, "gain": 0.45},
+        {"do": "look", "who": "brickley", "at": [0.8, 0.5], "delay": 0.4},
+        {"pause": 1.0},
+        {"line": "nuggo", "text": "See? Now it's well rested.", "emotion": "smug", "pose": "shrug"},
+        {"sfx": "snore", "delay": 0.1, "gain": 0.4},
+        {"do": "look", "who": "brickley", "at": [0.0, 0.15]},
+        {"do": "pose", "who": "brickley", "value": "hold"},
+        {"pause": 0.3},
+        {"line": "brickley", "text": "Subscribe, before he invents breakfast.", "emotion": "smug"},
+        {"do": "pose", "who": "brickley", "value": "sip", "dur": 0.45},
+        {"sfx": "slurp", "delay": 0.4, "gain": 0.5},
+        {"overlay": "endcard", "sub": "EP. 1 • THE SNOOZE-O-MATIC", "cta": "SUBSCRIBE", "y": 860, "dur": 3.2, "delay": 0.3},
+        {"sfx": "sting", "delay": 0.35, "gain": 0.7},
+        {"pause": 3.5}
+      ],
+      "tail": 0.0
+    }
+  ],
+
+  "publish": {
+    "title": "He Invented a Box That Hits Snooze For You 😴🥊 #shorts",
+    "description": "Nuggo has solved mornings. Brickley is unconvinced. Episode 1 of a new animated comedy from N4V3D Animation Studio.\n\n#animation #cartoon #comedy #shorts",
+    "tags": ["animation", "cartoon", "comedy", "shorts", "2d animation", "N4V3D"],
+    "made_for_kids": null,
+    "synthetic_disclosure": "Original 2D animation. Placeholder synthetic (TTS) voices in pilot."
+  }
+}
