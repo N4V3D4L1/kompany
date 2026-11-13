@@ -1,0 +1,89 @@
+{
+  "video": "/home/user/kompany/n4v3d-media/releases/w001_how_did_humans_invent_money/N4V3D_w001_how_did_humans_invent_money_1080x1920.mp4",
+  "passed": true,
+  "errors": 0,
+  "warnings": 0,
+  "duration": 57.366667,
+  "lufs": -13.9,
+  "true_peak": -1.8,
+  "checks": [
+    {
+      "check": "Resolution is 1080x1920 (9:16 vertical)",
+      "passed": true,
+      "detail": "1080x1920",
+      "severity": "error"
+    },
+    {
+      "check": "Video codec H.264 / yuv420p",
+      "passed": true,
+      "detail": "h264 yuv420p",
+      "severity": "error"
+    },
+    {
+      "check": "Frame rate 30 fps",
+      "passed": true,
+      "detail": "30.000",
+      "severity": "error"
+    },
+    {
+      "check": "Duration within Shorts limit (<= 60 s)",
+      "passed": true,
+      "detail": "57.37s",
+      "severity": "error"
+    },
+    {
+      "check": "Duration on target (57s +/- 1.0s)",
+      "passed": true,
+      "detail": "57.37s",
+      "severity": "error"
+    },
+    {
+      "check": "Audio track present (AAC, 48 kHz, stereo)",
+      "passed": true,
+      "detail": "aac 48000Hz 2ch",
+      "severity": "error"
+    },
+    {
+      "check": "Fast-start (moov atom first) for streaming",
+      "passed": true,
+      "detail": "moov before mdat",
+      "severity": "error"
+    },
+    {
+      "check": "Integrated loudness -14 LUFS +/- 1.5",
+      "passed": true,
+      "detail": "-13.9 LUFS",
+      "severity": "error"
+    },
+    {
+      "check": "True peak <= -1.0 dBTP",
+      "passed": true,
+      "detail": "-1.8 dBTP",
+      "severity": "error"
+    },
+    {
+      "check": "No black frames > 0.4 s",
+      "passed": true,
+      "detail": "0 found []",
+      "severity": "error"
+    },
+    {
+      "check": "No frozen picture > 2.5 s",
+      "passed": true,
+      "detail": "0 found []",
+      "severity": "warning"
+    },
+    {
+      "check": "No dead air > 1.2 s",
+      "passed": true,
+      "detail": "0 found []",
+      "severity": "warning"
+    },
+    {
+      "check": "File size reasonable (< 100 MB)",
+      "passed": true,
+      "detail": "7.8 MB",
+      "severity": "error"
+    }
+  ]
+}

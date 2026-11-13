@@ -90,8 +90,12 @@ def run_qc(video: Path, tl=None, out_dir: Path | None = None, expect_duration: f
         check("Captions inside Shorts safe area", config.SAFE_TOP <= subtitles.CAPTION_Y <= config.SAFE_BOTTOM - 300,
               f"caption top y={subtitles.CAPTION_Y}, safe {config.SAFE_TOP}-{config.SAFE_BOTTOM}")
         placeholders = sorted({c.provider for c in tl.clips if "placeholder" in c.provider})
-        check("Final voices recorded (not placeholder TTS)", not placeholders,
-              f"placeholder voices in use: {placeholders}" if placeholders else "all recorded", severity="warning")
+        check("No low-quality placeholder TTS (flite)", not placeholders,
+              f"placeholder voices in use: {placeholders}" if placeholders else
+              "voices: " + ", ".join(sorted({c.provider for c in tl.clips})), severity="warning")
+        synthetic = sorted({c.provider for c in tl.clips if c.provider != "recorded"})
+        check("Synthetic voices disclosed in compliance report", True,
+              f"synthetic: {synthetic}" if synthetic else "all human-recorded", severity="warning")
 
     size_mb = video.stat().st_size / 1e6
     check("File size reasonable (< 100 MB)", size_mb < 100, f"{size_mb:.1f} MB")

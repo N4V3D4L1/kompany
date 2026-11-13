@@ -148,4 +148,23 @@ class AlarmClock:
         return p.finish(), p.origin_px()
 
 
-PROPS = {"box": SnoozeOMatic, "clock": AlarmClock}
+class Mug:
+    """Brickley's tea mug as a free prop (for when it leaves his hand)."""
+    name = "mug"
+
+    @classmethod
+    def render(cls, s: dict, scale: float = 1.0):
+        from .characters import Brickley
+        p = Pen(200, 220, origin=(100, 160), scale=scale)
+        Brickley._mug(p, 0, 0, s.get("t", 0.0)) if s.get("steam", False) else cls._plain(p)
+        return p.finish(), p.origin_px()
+
+    @staticmethod
+    def _plain(p):
+        p.rrect(-30, -44, 30, 26, 10, fill=WHITE)
+        p.rrect(-30, -18, 30, -6, 0, fill=hex2rgba("#2EC4B6"), width=0)
+        p.rrect(-30, -44, 30, 26, 10, fill=None)
+        p.curve([(30, -30), (56, -22), (30, 8)], INK, 8)
+
+
+PROPS = {"box": SnoozeOMatic, "clock": AlarmClock, "mug": Mug}

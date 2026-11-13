@@ -16,7 +16,7 @@ from .timeline import Timeline
 
 W, H = config.WIDTH, config.HEIGHT
 SCREEN_SPACE = {"title", "endcard", "flash"}
-SHADOW_W = {"nuggo": 170, "brickley": 150, "box": 175, "clock": 70}
+SHADOW_W = {"nuggo": 170, "brickley": 150, "box": 175, "clock": 70, "mug": 40}
 
 
 def _blink(t, phase):

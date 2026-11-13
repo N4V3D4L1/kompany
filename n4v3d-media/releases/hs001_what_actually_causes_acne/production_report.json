@@ -1,0 +1,123 @@
+{
+  "id": "hs001",
+  "title": "What Actually Causes Acne?",
+  "channel": "health",
+  "video": "N4V3D_hs001_what_actually_causes_acne_1080x1920.mp4",
+  "duration": 59.65,
+  "frames": 1789,
+  "voice": [
+    "kokoro-neural-tts"
+  ],
+  "fact_gate": {
+    "render_ok": true,
+    "publish_ok": false,
+    "blockers": [],
+    "publish_blockers": [
+      "medical expert review pending (required before approval/publish)"
+    ],
+    "warnings": [],
+    "medical": true,
+    "counts": {
+      "claims": 12,
+      "verified": 12,
+      "hedged": 0,
+      "sources": 7
+    }
+  },
+  "story_findings": [
+    "[INFO] pace: 159 words/min (target 130-175)"
+  ],
+  "mix": {
+    "peak_pre_limiter": 0.865
+  },
+  "loudness_pre_norm": {
+    "input_i": "-15.37",
+    "input_tp": "-0.70",
+    "input_lra": "6.10",
+    "input_thresh": "-25.96",
+    "output_i": "-14.47",
+    "output_tp": "-1.50",
+    "output_lra": "5.20",
+    "output_thresh": "-24.97",
+    "normalization_type": "dynamic",
+    "target_offset": "0.47"
+  },
+  "qc_passed": true,
+  "extra_checks": [
+    {
+      "check": "Every segment has narration audio",
+      "passed": true
+    },
+    {
+      "check": "Every segment has captions",
+      "passed": true
+    },
+    {
+      "check": "Captions end before video end",
+      "passed": true
+    },
+    {
+      "check": "Caption chunks <= 32 chars",
+      "passed": true
+    },
+    {
+      "check": "Captions above Shorts UI zone",
+      "passed": true
+    },
+    {
+      "check": "Scene lengths 2.5-15 s",
+      "passed": true
+    }
+  ],
+  "scenes": [
+    {
+      "scene": "pore_zoom",
+      "stage": "hook",
+      "t0": 0.0,
+      "t1": 3.86
+    },
+    {
+      "scene": "question_card",
+      "stage": "question",
+      "t0": 3.86,
+      "t1": 8.12
+    },
+    {
+      "scene": "follicle_sebum",
+      "stage": "discovery",
+      "t0": 8.12,
+      "t1": 16.18
+    },
+    {
+      "scene": "plug_forms",
+      "stage": "discovery",
+      "t0": 16.18,
+      "t1": 24.33
+    },
+    {
+      "scene": "bacteria",
+      "stage": "surprise",
+      "t0": 24.33,
+      "t1": 33.52
+    },
+    {
+      "scene": "inflammation",
+      "stage": "surprise",
+      "t0": 33.52,
+      "t1": 41.13
+    },
+    {
+      "scene": "four_factors",
+      "stage": "payoff",
+      "t0": 41.13,
+      "t1": 53.23
+    },
+    {
+      "scene": "health_end",
+      "stage": "final",
+      "t0": 53.23,
+      "t1": 59.65
+    }
+  ],
+  "render_seconds": 131.7
+}

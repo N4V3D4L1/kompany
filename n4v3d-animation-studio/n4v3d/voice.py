@@ -95,7 +95,55 @@ class FliteVoice:
         return out_path
 
 
-PROVIDERS = {"flite": FliteVoice}
+KOKORO_DIR = Path(__import__("os").environ.get("N4V3D_KOKORO_DIR", str(config.ROOT.parent / ".models" / "kokoro")))
+_KOKORO = None
+
+
+def kokoro_available() -> bool:
+    try:
+        import kokoro_onnx  # noqa: F401
+    except ImportError:
+        return False
+    return (KOKORO_DIR / "kokoro-v1.0.int8.onnx").exists() and (KOKORO_DIR / "voices-v1.0.bin").exists()
+
+
+class KokoroVoice:
+    """Neural TTS (Kokoro-82M, Apache-2.0 weights/voices; kokoro-onnx MIT). Offline, CPU.
+
+    voice  : e.g. af_heart, bm_george, am_puck (see `python -m n4v3d voices`)
+    speed  : speaking rate (1.0 = natural)
+    pitch  : optional cartoon pitch shift (1.0 = none) applied with FFmpeg
+    """
+
+    def __init__(self, voice="af_heart", speed=1.0, pitch=1.0, lang="en-us", **_):
+        self.voice, self.speed, self.pitch, self.lang = voice, float(speed), float(pitch), lang
+
+    def key(self, text):
+        return hashlib.sha1(json.dumps(["kokoro-v1", text, self.voice, self.speed, self.pitch]).encode()).hexdigest()[:16]
+
+    def synth(self, text: str, out_path: Path):
+        global _KOKORO
+        if _KOKORO is None:
+            from kokoro_onnx import Kokoro
+            _KOKORO = Kokoro(str(KOKORO_DIR / "kokoro-v1.0.int8.onnx"), str(KOKORO_DIR / "voices-v1.0.bin"))
+        samples, sr = _KOKORO.create(text, voice=self.voice, speed=self.speed, lang=self.lang)
+        raw = Path(out_path).with_suffix(".raw.wav")
+        write_wav(raw, np.asarray(samples, np.float32), sr)
+        af = [f"aresample={config.SAMPLE_RATE}"]
+        if abs(self.pitch - 1.0) > 1e-3:
+            af = [f"asetrate={int(sr * self.pitch)}", f"aresample={config.SAMPLE_RATE}", f"atempo={1 / self.pitch:.4f}"]
+        trim = "silenceremove=start_periods=1:start_threshold=-55dB"
+        af += ["highpass=f=70", trim, "areverse", trim, "areverse"]
+        run([config.FFMPEG, "-y", "-loglevel", "error", "-i", str(raw), "-af", ",".join(af),
+             "-ac", "1", "-ar", str(config.SAMPLE_RATE), "-sample_fmt", "s16", str(out_path)])
+        raw.unlink(missing_ok=True)
+        a = read_wav(out_path)
+        pad = np.zeros(int(0.04 * config.SAMPLE_RATE), np.float32)
+        write_wav(out_path, np.concatenate([pad, a / (np.max(np.abs(a)) or 1) * 0.85, pad]))
+        return out_path
+
+
+PROVIDERS = {"flite": FliteVoice, "kokoro": KokoroVoice}
 
 
 def synth_line(line_id: str, text: str, cast_cfg: dict, cache_dir: Path, recorded_dir: Path | None) -> tuple[Path, str]:
@@ -106,6 +154,8 @@ def synth_line(line_id: str, text: str, cast_cfg: dict, cache_dir: Path, recorde
             return rec, "recorded"
     prov = cast_cfg.get("provider", "flite")
     cls = PROVIDERS.get(prov)
+    if prov == "kokoro" and not kokoro_available():
+        cls = None
     if cls is None:
         print(f"  ! voice provider '{prov}' unavailable, falling back to flite placeholder")
         cls = FliteVoice
@@ -115,7 +165,8 @@ def synth_line(line_id: str, text: str, cast_cfg: dict, cache_dir: Path, recorde
     out = cache_dir / f"{line_id}_{v.key(text)}.wav"
     if not out.exists():
         v.synth(text, out)
-    return out, f"{prov}-placeholder"
+    label = "kokoro-neural-tts" if prov == "kokoro" else f"{prov}-placeholder"
+    return out, label
 
 
 def envelope(samples: np.ndarray, fps: int = config.FPS, sr: int = config.SAMPLE_RATE) -> np.ndarray:

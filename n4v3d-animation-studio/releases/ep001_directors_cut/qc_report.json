@@ -1,0 +1,143 @@
+{
+  "video": "output/ep001v2_the_snooze_o_matic_director_s_cut/N4V3D_ep001v2_the_snooze_o_matic_director_s_cut_1080x1920.mp4",
+  "passed": true,
+  "errors": 0,
+  "warnings": 1,
+  "duration": 53.266667,
+  "lufs": -14.5,
+  "true_peak": -1.0,
+  "checks": [
+    {
+      "check": "Resolution is 1080x1920 (9:16 vertical)",
+      "passed": true,
+      "detail": "1080x1920",
+      "severity": "error"
+    },
+    {
+      "check": "Video codec H.264 / yuv420p",
+      "passed": true,
+      "detail": "h264 yuv420p",
+      "severity": "error"
+    },
+    {
+      "check": "Frame rate 30 fps",
+      "passed": true,
+      "detail": "30.000",
+      "severity": "error"
+    },
+    {
+      "check": "Duration within Shorts limit (<= 60 s)",
+      "passed": true,
+      "detail": "53.27s",
+      "severity": "error"
+    },
+    {
+      "check": "Duration on target (54s +/- 1.0s)",
+      "passed": true,
+      "detail": "53.27s",
+      "severity": "error"
+    },
+    {
+      "check": "Audio track present (AAC, 48 kHz, stereo)",
+      "passed": true,
+      "detail": "aac 48000Hz 2ch",
+      "severity": "error"
+    },
+    {
+      "check": "Fast-start (moov atom first) for streaming",
+      "passed": true,
+      "detail": "moov before mdat",
+      "severity": "error"
+    },
+    {
+      "check": "Integrated loudness -14 LUFS +/- 1.5",
+      "passed": true,
+      "detail": "-14.5 LUFS",
+      "severity": "error"
+    },
+    {
+      "check": "True peak <= -1.0 dBTP",
+      "passed": true,
+      "detail": "-1.0 dBTP",
+      "severity": "error"
+    },
+    {
+      "check": "No black frames > 0.4 s",
+      "passed": true,
+      "detail": "0 found []",
+      "severity": "error"
+    },
+    {
+      "check": "No frozen picture > 2.5 s",
+      "passed": true,
+      "detail": "0 found []",
+      "severity": "warning"
+    },
+    {
+      "check": "No dead air > 1.2 s",
+      "passed": true,
+      "detail": "0 found []",
+      "severity": "warning"
+    },
+    {
+      "check": "Every dialogue line has voice audio",
+      "passed": true,
+      "detail": "16 lines",
+      "severity": "error"
+    },
+    {
+      "check": "Every dialogue line has captions",
+      "passed": true,
+      "detail": "31 caption cues",
+      "severity": "error"
+    },
+    {
+      "check": "Captions end before video end",
+      "passed": true,
+      "detail": "last cue 47.00s",
+      "severity": "error"
+    },
+    {
+      "check": "Reading speed <= 22 chars/sec",
+      "passed": false,
+      "detail": "max 23.6 cps",
+      "severity": "warning"
+    },
+    {
+      "check": "Caption chunks <= 22 chars",
+      "passed": true,
+      "detail": "[]",
+      "severity": "warning"
+    },
+    {
+      "check": "No overlapping dialogue",
+      "passed": true,
+      "detail": "[]",
+      "severity": "warning"
+    },
+    {
+      "check": "Captions inside Shorts safe area",
+      "passed": true,
+      "detail": "caption top y=845, safe 220-1500",
+      "severity": "error"
+    },
+    {
+      "check": "No low-quality placeholder TTS (flite)",
+      "passed": true,
+      "detail": "voices: kokoro-neural-tts",
+      "severity": "warning"
+    },
+    {
+      "check": "Synthetic voices disclosed in compliance report",
+      "passed": true,
+      "detail": "synthetic: ['kokoro-neural-tts']",
+      "severity": "warning"
+    },
+    {
+      "check": "File size reasonable (< 100 MB)",
+      "passed": true,
+      "detail": "15.5 MB",
+      "severity": "error"
+    }
+  ]
+}

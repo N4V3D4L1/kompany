@@ -40,7 +40,8 @@ def mix(tl: Timeline, out_path: Path) -> dict:
         bed = voice.read_wav(Path(tl.episode["_dir"]) / mcfg["file"])[:n]
         bed = np.pad(bed, (0, max(0, n - len(bed))))
     else:
-        bed = music.bouncy_loop(tl.duration, bpm=mcfg.get("bpm", 118))
+        bed = music.bouncy_loop(tl.duration + 0.1, bpm=mcfg.get("bpm", 118))[:n]
+        bed = np.pad(bed, (0, max(0, n - len(bed))))
     # sidechain-style ducking under dialogue
     presence = np.zeros(n, np.float32)
     for c in tl.clips:
